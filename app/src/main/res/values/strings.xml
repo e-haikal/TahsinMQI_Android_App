@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">TahsinMQI</string>
-    <string name="title_activity_temp_bottom_nav">TempBottomNav</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_alquran">Al-Qur\'an</string>
 </resources>
