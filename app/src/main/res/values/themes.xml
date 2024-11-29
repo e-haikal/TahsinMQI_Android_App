@@ -1,9 +1,19 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.TahsinMQI" parent="Theme.Material3.DayNight.NoActionBar">
+
+    <!-- Base theme with Action Bar -->
+    <style name="Base.Theme.TahsinMQI" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
+
+    <!-- Base theme without Action Bar -->
+    <style name="Theme.TahsinMQI.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/greenish</item>
+    </style>
+
 
     <style name="Theme.TahsinMQI" parent="Base.Theme.TahsinMQI" />
 </resources>
