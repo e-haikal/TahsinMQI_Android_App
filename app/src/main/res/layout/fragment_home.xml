@@ -16,34 +16,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tv_placeholder_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_clock"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_heading_extra_large"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/margin_large"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toStartOf="@+id/tv_placeholder_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_placeholder_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_welcome"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_caption"
+        android:layout_marginEnd="@dimen/margin_large"
+        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintBottom_toTopOf="@+id/materialCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/view_background"
-        app:layout_constraintBottom_toBottomOf="@id/view_background"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="8dp">
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_background">
 
         <!-- Horizontal LinearLayout for menu items -->
         <LinearLayout
+            android:id="@+id/menu_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="horizontal"
             android:padding="8dp"
-            android:weightSum="3"
-            android:gravity="center">
+            android:weightSum="3">
 
             <!-- First menu item -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="4dp">
 
                 <ImageView
@@ -51,51 +84,56 @@
                     android:layout_height="45dp"
                     android:contentDescription="Image for Materi"
                     android:src="@drawable/img_material" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_material"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:text="@string/title_material" />
             </LinearLayout>
 
             <!-- Second menu item -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="4dp">
+
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/img_alquran"
-                    android:contentDescription="Image for Alquran" />
+                    android:contentDescription="Image for Alquran"
+                    android:src="@drawable/img_alquran" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_alquran"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:text="@string/title_alquran" />
             </LinearLayout>
 
             <!-- Third menu item -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:orientation="vertical"
                 android:padding="4dp">
+
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/img_schedule"
-                    android:contentDescription="Image for Jadwal" />
+                    android:contentDescription="Image for Jadwal"
+                    android:src="@drawable/img_schedule" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/title_schedule"
-                    android:gravity="center" />
+                    android:gravity="center"
+                    android:text="@string/title_schedule" />
             </LinearLayout>
 
         </LinearLayout>
