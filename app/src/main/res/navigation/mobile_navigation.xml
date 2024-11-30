@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.siaptekno.tahsinmqi.ui.dashboard.DashboardFragment"
+        android:name="com.siaptekno.tahsinmqi.ui.alquran.AlquranFragment"
         android:label="@string/title_alquran"
         tools:layout="@layout/fragment_alquran" />
 

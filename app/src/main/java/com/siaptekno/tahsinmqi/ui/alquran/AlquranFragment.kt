@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.dashboard
+package com.siaptekno.tahsinmqi.ui.alquran
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.siaptekno.tahsinmqi.databinding.FragmentAlquranBinding
 
-class DashboardFragment : Fragment() {
+class AlquranFragment : Fragment() {
 
     private var _binding: FragmentAlquranBinding? = null
 
@@ -23,7 +23,7 @@ class DashboardFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val dashboardViewModel =
-            ViewModelProvider(this).get(DashboardViewModel::class.java)
+            ViewModelProvider(this).get(AlquranViewModel::class.java)
 
         _binding = FragmentAlquranBinding.inflate(inflater, container, false)
         val root: View = binding.root
