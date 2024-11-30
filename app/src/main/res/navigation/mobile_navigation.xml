@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_alquran"
         android:name="com.siaptekno.tahsinmqi.ui.alquran.AlquranFragment"
         android:label="@string/title_alquran"
         tools:layout="@layout/fragment_alquran" />
