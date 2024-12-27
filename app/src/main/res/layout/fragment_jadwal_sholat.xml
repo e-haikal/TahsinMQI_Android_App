@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.jadwal.JadwalSholatFragment">
+
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="My App"
+        app:titleTextColor="@android:color/white"
+        android:background="?android:attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/ic_home_24" />
+    <View
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/greenish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_placeholder_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_location"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_heading_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"/>
+
+    <TextView
+        android:id="@+id/tv_placeholder_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_current_time"
+        android:textColor="@color/white"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0.1"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_heading_extra_large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_placeholder_location"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"/>
+
+    <TextView
+        android:id="@+id/tv_title_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_date"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_background"/>
+
+    <TextView
+        android:id="@+id/tv_placeholder_current_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/placeholder_current_date"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textSize="@dimen/text_size_heading_large"
+        android:textStyle="bold"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_date"/>
+
+    <!-- List prayer imsak start -->
+    <TextView
+        android:id="@+id/tv_title_imsak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_imsak"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_placeholder_current_date"/>
+    <TextView
+        android:id="@+id/tv_placeholder_imsak_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_imsak_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_imsak"
+        app:layout_constraintTop_toTopOf="@id/tv_title_imsak" />
+
+    <!-- List prayer shubuh start -->
+    <TextView
+        android:id="@+id/tv_title_shubuh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_shubuh"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_imsak"/>
+    <TextView
+        android:id="@+id/tv_placeholder_shubuh_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_shubuh_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_shubuh"
+        app:layout_constraintTop_toTopOf="@id/tv_title_shubuh" />
+
+    <!-- List prayer syuruk start -->
+    <TextView
+        android:id="@+id/tv_title_syuruk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_syuruk"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_shubuh"/>
+    <TextView
+        android:id="@+id/tv_placeholder_syuruk_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_syuruk_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_syuruk"
+        app:layout_constraintTop_toTopOf="@id/tv_title_syuruk" />
+
+    <!-- List prayer dzuhur start -->
+    <TextView
+        android:id="@+id/tv_title_dzuhur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_dzuhur"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_syuruk"/>
+    <TextView
+        android:id="@+id/tv_placeholder_dzuhur_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_dzuhur_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_dzuhur"
+        app:layout_constraintTop_toTopOf="@id/tv_title_dzuhur" />
+
+    <!-- List prayer ashar start -->
+    <TextView
+        android:id="@+id/tv_title_ashar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_ashar"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_dzuhur"/>
+    <TextView
+        android:id="@+id/tv_placeholder_ashar_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_ashar_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_ashar"
+        app:layout_constraintTop_toTopOf="@id/tv_title_ashar" />
+
+    <!-- List prayer maghrib start -->
+    <TextView
+        android:id="@+id/tv_title_maghrib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_maghrib"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_ashar"/>
+    <TextView
+        android:id="@+id/tv_placeholder_maghrib_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_maghrib_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_maghrib"
+        app:layout_constraintTop_toTopOf="@id/tv_title_maghrib" />
+
+    <!-- List prayer isya start -->
+    <TextView
+        android:id="@+id/tv_title_isya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_isya"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_maghrib"/>
+    <TextView
+        android:id="@+id/tv_placeholder_isya_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:text="@string/placeholder_isya_time"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_body"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/tv_title_isya"
+        app:layout_constraintTop_toTopOf="@id/tv_title_isya" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

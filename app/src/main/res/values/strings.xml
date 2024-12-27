@@ -4,8 +4,27 @@
     <string name="title_alquran">Al-Qur\'an</string>
     <string name="title_material">Materi</string>
     <string name="title_schedule">Jadwal</string>
-    <string name="placeholder_clock">10:00 am</string>
+    <string name="title_date">Tanggal</string>
+    <string name="title_imsak">Imsak</string>
+    <string name="title_shubuh">Shubuh</string>
+    <string name="title_syuruk">Syuruk</string>
+    <string name="title_dzuhur">Dzuhur</string>
+    <string name="title_ashar">Ashar</string>
+    <string name="title_maghrib">Maghrib</string>
+    <string name="title_isya">Isya</string>
+    <string name="placeholder_current_time">10:00 am</string>
+    <string name="placeholder_current_date">Rabu, 27 November 2024</string>
     <string name="placeholder_welcome">Ahlan, Jamaah Tahsin \n MQI!</string>
+    <string name="placeholder_location">Kota, Provinsi</string>
+    <string name="placeholder_imsak_time">00:00</string>
+    <string name="placeholder_shubuh_time">00:00</string>
+    <string name="placeholder_syuruk_time">00:00</string>
+    <string name="placeholder_dzuhur_time">00:00</string>
+    <string name="placeholder_ashar_time">00:00</string>
+    <string name="placeholder_maghrib_time">00:00</string>
+    <string name="placeholder_isya_time">00:00</string>
+
+
 
 
 </resources>
