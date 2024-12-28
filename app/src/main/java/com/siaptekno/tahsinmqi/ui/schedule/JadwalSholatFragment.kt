@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
+import java.text.SimpleDateFormat
+import java.util.Calendar
+import java.util.Locale
 
 class JadwalSholatFragment : Fragment() {
 
@@ -36,10 +39,24 @@ class JadwalSholatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Set the current time
+        setCurrentTime()
+
         observeViewModel()
 
         // Fetch the schedule when the fragment is created
         viewModel.fetchSchedule()
+    }
+
+    private fun setCurrentTime() {
+        // Get current time
+        val currentTime = Calendar.getInstance().time
+        // Format the current time into a readable format (HH:mm:ss)
+        val timeFormat = SimpleDateFormat("HH:mm:ss", Locale.getDefault())
+        val formattedTime = timeFormat.format(currentTime)
+
+        // Set the formatted time to the TextView
+        binding.tvPlaceholderCurrentTime.text = formattedTime
     }
 
     private fun observeViewModel() {
