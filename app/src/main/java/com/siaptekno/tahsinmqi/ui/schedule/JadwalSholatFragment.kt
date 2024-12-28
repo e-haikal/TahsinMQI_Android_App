@@ -2,6 +2,8 @@ package com.siaptekno.tahsinmqi.ui.schedule
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,6 +23,15 @@ class JadwalSholatFragment : Fragment() {
 
     private val viewModel: JadwalSholatViewModel by viewModels()
 
+    private val handler = Handler(Looper.getMainLooper())
+    private val timeUpdater = object : Runnable {
+        override fun run() {
+            setCurrentTime()
+            // Repeat this runnable every second
+            handler.postDelayed(this, 1000)
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -39,8 +50,8 @@ class JadwalSholatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Set the current time
-        setCurrentTime()
+        // Start updating the current time
+        handler.post(timeUpdater)
 
         observeViewModel()
 
@@ -81,6 +92,9 @@ class JadwalSholatFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+
+        // Stop the time updater when the view is destroyed
+        handler.removeCallbacks(timeUpdater)
     }
 
 }
