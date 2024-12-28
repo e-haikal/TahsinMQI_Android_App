@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.jadwal
+package com.siaptekno.tahsinmqi.ui.schedule
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle

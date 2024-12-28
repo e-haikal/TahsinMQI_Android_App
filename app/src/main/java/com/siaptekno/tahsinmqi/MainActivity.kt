@@ -18,13 +18,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        enableEdgeToEdge()
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
+            insets
+        }
 
         // Set up the Toolbar as the ActionBar
         val toolbar: Toolbar = binding.toolbar
         setSupportActionBar(toolbar)
+
+        // Set navigation icon tint to black
+        toolbar.navigationIcon?.setTint(getColor(R.color.white))
 
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_temp_bottom_nav)
@@ -32,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
+        // Define top-level destinations (home and alquran only, not schedule)
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_home, R.id.navigation_alquran
@@ -39,15 +48,40 @@ class MainActivity : AppCompatActivity() {
         )
         // Set up the ActionBar with the NavController
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        // Apply white tint programmatically to the navigation icon
+        binding.toolbar.navigationIcon?.setTint(getColor(R.color.white))
         navView.setupWithNavController(navController)
 
         // Add a listener to show/hide the ActionBar based on the current destination
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            if (destination.id == R.id.navigation_home || destination.id == R.id.navigation_alquran) {
-                supportActionBar?.hide()  // Hide the ActionBar for these destinations
-            } else {
-                supportActionBar?.show()  // Show the ActionBar for other destinations
+            when (destination.id) {
+                R.id.navigation_home -> {
+                    binding.toolbar.title = getString(R.string.title_home)
+                }
+
+                R.id.navigation_alquran -> {
+                    binding.toolbar.title = getString(R.string.title_alquran)
+                }
+
+                R.id.navigation_schedule -> {
+                    binding.toolbar.title = getString(R.string.title_schedule)
+                }
+
+                else -> {
+                    // Handle other destinations if needed
+                    binding.toolbar.title = getString(R.string.app_name)
+                }
             }
         }
     }
+
+    // Handle the back button press for fragments
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment_activity_temp_bottom_nav)
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+
+
 }

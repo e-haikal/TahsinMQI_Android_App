@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -27,6 +29,11 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        // Set up the click listener for the schedule menu item
+        binding.layoutClickSchedule.setOnClickListener {
+            findNavController().navigate(R.id.navigation_schedule) // Ensure the ID matches the navigation graph
+        }
 
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()

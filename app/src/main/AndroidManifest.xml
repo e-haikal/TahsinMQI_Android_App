@@ -13,13 +13,16 @@
         android:theme="@style/Theme.TahsinMQI"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.TahsinMQI.NoActionBar"
+            android:name=".ui.schedule.JadwalActivity"
             android:exported="false" />
         <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TahsinMQI.NoActionBar" />
+        <activity
             android:name=".SplashScreenActivity"
-            android:theme="@style/Theme.TahsinMQI.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.TahsinMQI.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -11,5 +11,4 @@
         android:icon="@drawable/ic_alquran_24"
         android:title="@string/title_alquran" />
 
-
 </menu>

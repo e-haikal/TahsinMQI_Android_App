@@ -20,7 +20,7 @@
         android:id="@+id/tv_placeholder_clock"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/placeholder_clock"
+        android:text="@string/placeholder_current_time"
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_heading_extra_large"
         android:textStyle="bold"
@@ -116,6 +116,7 @@
 
             <!-- Third menu item -->
             <LinearLayout
+                android:id="@+id/layout_click_schedule"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

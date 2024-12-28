@@ -10,6 +10,8 @@
     <!-- Base theme without Action Bar -->
     <style name="Theme.TahsinMQI.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
+        <!-- Ensure toolbar uses your custom style -->
+        <item name="colorOnPrimary">@color/white</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/greenish</item>
     </style>
