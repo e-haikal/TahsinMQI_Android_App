@@ -22,9 +22,6 @@
         android:name="com.siaptekno.tahsinmqi.ui.schedule.JadwalSholatFragment"
         android:label="@string/title_schedule"
         tools:layout="@layout/fragment_alquran" >
-        <action
-            android:id="@+id/action_navigation_schedule_to_navigation_home"
-            app:destination="@id/navigation_home" />
     </fragment>
 
 

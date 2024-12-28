@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -31,27 +32,51 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = binding.toolbar
         setSupportActionBar(toolbar)
 
-        // Set navigation icon tint to black
+        // Set navigation icon tint to white for better visibility
         toolbar.navigationIcon?.setTint(getColor(R.color.white))
 
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_temp_bottom_nav)
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-
-        // Define top-level destinations (home and alquran only, not schedule)
+        // Define top-level destinations for managing the back stack
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_alquran
+                R.id.navigation_home, // HomeFragment
+                R.id.navigation_alquran // AlquranFragment
             )
         )
+
         // Set up the ActionBar with the NavController
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         // Apply white tint programmatically to the navigation icon
         binding.toolbar.navigationIcon?.setTint(getColor(R.color.white))
-        navView.setupWithNavController(navController)
+
+
+        // Customize bottom navigation behavior
+        navView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_home -> {
+                    // Navigate to HomeFragment and clear any fragment added on top of it
+                    val navOptions = NavOptions.Builder()
+                        .setPopUpTo(R.id.navigation_home, false) // Clear stack up to Home
+                        .build()
+                    navController.navigate(R.id.navigation_home, null, navOptions)
+                    true
+                }
+                R.id.navigation_alquran -> {
+                    // Navigate normally to AlquranFragment
+                    navController.navigate(R.id.navigation_alquran)
+                    true
+                }
+                R.id.navigation_schedule -> {
+                    // Navigate normally to ScheduleFragment
+                    navController.navigate(R.id.navigation_schedule)
+                    true
+                }
+                else -> false
+            }
+        }
 
         // Add a listener to show/hide the ActionBar based on the current destination
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -81,7 +106,4 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_activity_temp_bottom_nav)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
-
-
-
 }
