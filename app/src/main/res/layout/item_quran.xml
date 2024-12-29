@@ -23,7 +23,7 @@
         android:textColor="@color/greenish"
         android:layout_marginStart="@dimen/margin_medium"
         android:background="@drawable/circle_background"
-        android:padding="10dp"
+        android:padding="8dp"
         app:layout_constraintStart_toStartOf="@id/view_background"
         app:layout_constraintTop_toTopOf="@id/view_background"
         app:layout_constraintBottom_toBottomOf="@id/view_background"/>
