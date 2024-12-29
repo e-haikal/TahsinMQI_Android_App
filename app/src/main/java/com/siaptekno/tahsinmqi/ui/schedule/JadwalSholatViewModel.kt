@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.siaptekno.tahsinmqi.data.response.ScheduleResponse
-import com.siaptekno.tahsinmqi.data.retrofit.ApiConfig
+import com.siaptekno.tahsinmqi.data.retrofit.ScheduleApiConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -29,7 +29,7 @@ class JadwalSholatViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 val response = withContext(Dispatchers.IO) {
-                    ApiConfig.getApiService().getSchedule(currentDate).execute()
+                    ScheduleApiConfig.getApiService().getSchedule(currentDate).execute()
                 }
                 if (response.isSuccessful) {
                     response.body()?.let {

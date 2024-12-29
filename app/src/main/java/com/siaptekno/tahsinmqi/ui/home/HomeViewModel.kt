@@ -1,13 +1,38 @@
 package com.siaptekno.tahsinmqi.ui.home
 
+import android.os.Handler
+import android.os.Looper
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import java.text.SimpleDateFormat
+import java.util.Locale
+import java.util.Timer
 
 class HomeViewModel : ViewModel() {
+    private val _currentTime = MutableLiveData<String>()
+    val currentTime: LiveData<String> get() = _currentTime
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+    private val timeFormat = SimpleDateFormat("hh:mm a", Locale.getDefault())
+    private val handler = Handler(Looper.getMainLooper())
+    private val timeUpdateRunnable = object : Runnable {
+        override fun run() {
+            // Update the current time
+            _currentTime.value = timeFormat.format(System.currentTimeMillis())
+            handler.postDelayed(this, 1000L) // Schedule next update after 1 second
+        }
     }
-    val text: LiveData<String> = _text
+
+    init {
+        startClockUpdate()
+    }
+
+    private fun startClockUpdate() {
+        handler.post(timeUpdateRunnable) // Start the initial update
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        handler.removeCallbacks(timeUpdateRunnable) // Stop updates to avoid memory leaks
+    }
 }

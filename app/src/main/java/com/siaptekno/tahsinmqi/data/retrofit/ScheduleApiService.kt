@@ -5,7 +5,7 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface ApiService {
+interface ScheduleApiService {
     @GET("sholat/jadwal/1504/{date}")
     fun getSchedule(
         @Path("date") date: String,
