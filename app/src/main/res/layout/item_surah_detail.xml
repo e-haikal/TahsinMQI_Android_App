@@ -66,6 +66,7 @@
         android:fontFamily="@font/uthamanic_reguler"/>
 
     <TextView
+        android:id="@+id/tv_verse_translation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/placeholder_verse_translation"
