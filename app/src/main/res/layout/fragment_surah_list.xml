@@ -6,22 +6,22 @@
     tools:context=".ui.alquran.AlquranFragment"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="@string/title_alquran"
-        app:navigationIcon="@drawable/ic_back_24"
-        android:background="@color/greenish"
-        app:titleTextColor="@color/white"
-        tools:ignore="MissingConstraints" />
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        app:title="@string/title_alquran"-->
+<!--        app:navigationIcon="@drawable/ic_back_24"-->
+<!--        android:background="@color/greenish"-->
+<!--        app:titleTextColor="@color/white"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="67dp" />
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/guideline"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_begin="67dp" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_surah"
@@ -33,6 +33,6 @@
         android:paddingBottom="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
