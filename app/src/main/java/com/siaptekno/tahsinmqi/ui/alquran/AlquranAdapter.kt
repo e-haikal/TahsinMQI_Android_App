@@ -14,6 +14,7 @@ class AlquranAdapter(private val listSurah: List<DataItem>, private val onItemCl
     inner class SurahViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemSurahListBinding.bind(view)
         fun bind(dataItem: DataItem) {
+            binding.tvSurahNumber.text = dataItem.number.toString()
             binding.tvSurahName.text = dataItem.name.transliteration.id
             binding.tvSurahTotalVerse.text = "${dataItem.numberOfVerses} ayat"
             itemView.setOnClickListener { onItemClick(dataItem) }

@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="66dp" />
+        app:layout_constraintGuide_begin="67dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_detail_surah"
@@ -29,6 +29,8 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_medium"
         app:layout_constraintVertical_bias="0"
+        android:clipToPadding="false"
+        android:paddingBottom="160dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline"

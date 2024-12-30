@@ -23,7 +23,7 @@
             android:gravity="center_vertical"
             android:textAlignment="center"
             android:text="@string/placeholder_surah_number"
-            android:textSize="@dimen/text_size_caption"
+            android:textSize="@dimen/text_size_heading_medium"
             android:background="@drawable/img_number_bg"
             android:textStyle="bold" />
 
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/placeholder_surah_name"
                 android:fontFamily="@font/roboto_medium"
-                android:textSize="@dimen/text_size_heading_small" />
+                android:textSize="@dimen/text_size_heading_medium" />
 
             <TextView
                 android:id="@+id/tv_surah_total_verse"
