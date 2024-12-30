@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        app:title="@string/title_placeholder_current_page"
+        app:title="@string/placeholder_surah_name"
         app:navigationIcon="@drawable/ic_back_24"
         android:background="@color/greenish"
         app:titleTextColor="@color/white"
