@@ -6,25 +6,23 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.response.DataItem
-import com.siaptekno.tahsinmqi.databinding.ItemSurahBinding
+import com.siaptekno.tahsinmqi.databinding.ItemSurahListBinding
 
-class AlquranAdapter(private var listSurah: List<DataItem>) :
+class AlquranAdapter(private val listSurah: List<DataItem>, private val onItemClick: (DataItem) -> Unit) :
     RecyclerView.Adapter<AlquranAdapter.SurahViewHolder>() {
 
-    inner class SurahViewHolder(private val binding: ItemSurahBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-        fun bind(surah: DataItem) {
-            binding.tvSurahName.text = surah.name.translation.en
-            binding.tvSurahNumber.text = surah.number.toString()
-            binding.tvVerseCount.text = "${surah.numberOfVerses} Ayahs"
+    inner class SurahViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        private val binding = ItemSurahListBinding.bind(view)
+        fun bind(dataItem: DataItem) {
+            binding.tvSurahName.text = dataItem.name.transliteration.id
+            binding.tvSurahTotalVerse.text = "${dataItem.numberOfVerses} ayat"
+            itemView.setOnClickListener { onItemClick(dataItem) }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SurahViewHolder {
-        val binding = ItemSurahBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false
-        )
-        return SurahViewHolder(binding)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_surah_list, parent, false)
+        return SurahViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: SurahViewHolder, position: Int) {
@@ -32,9 +30,4 @@ class AlquranAdapter(private var listSurah: List<DataItem>) :
     }
 
     override fun getItemCount() = listSurah.size
-
-    fun updateData(newList: List<DataItem>) {
-        listSurah = newList
-        notifyDataSetChanged()
-    }
 }

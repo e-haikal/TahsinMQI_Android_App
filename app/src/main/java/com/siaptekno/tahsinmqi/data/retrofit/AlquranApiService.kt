@@ -12,5 +12,4 @@ interface AlquranApiService {
 
     @GET("surah/{surah}")
     fun getSpecificSurah(@Path("surah") surah: Int): Call<AlquranResponse>
-
 }

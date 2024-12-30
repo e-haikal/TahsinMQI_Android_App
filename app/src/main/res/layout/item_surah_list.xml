@@ -9,7 +9,7 @@
         android:id="@+id/iv_surah_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        tools:src="@tools:sample/avatars"/>
+        android:src="@drawable/img_placeholder_greenish" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/placeholder_surah_name"
-            android:fontFamily="@font/Roboto_Regular"
+            android:fontFamily="@font/roboto_regular"
             android:textSize="@dimen/text_size_heading_medium"/>
 
         <TextView
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_small"
             android:text="@string/placeholder_surah_total_verse"
-            android:fontFamily="@font/Roboto_Regular"
+            android:fontFamily="@font/roboto_regular"
             android:textSize="@dimen/text_size_body" />
     </LinearLayout>
 

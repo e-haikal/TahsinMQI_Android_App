@@ -86,7 +86,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_alquran -> {
-                    binding.toolbar.title = getString(R.string.title_alquran)
+//                    binding.toolbar.title = getString(R.string.title_alquran)
+                    supportActionBar?.hide()
                 }
 
                 R.id.navigation_schedule -> {

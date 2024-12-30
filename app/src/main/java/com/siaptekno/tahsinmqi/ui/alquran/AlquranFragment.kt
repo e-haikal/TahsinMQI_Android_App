@@ -4,48 +4,49 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.siaptekno.tahsinmqi.data.AlquranRepository
-import com.siaptekno.tahsinmqi.data.retrofit.AlquranApiConfig
-import com.siaptekno.tahsinmqi.databinding.FragmentAlquranBinding
+import com.siaptekno.tahsinmqi.databinding.FragmentSurahListBinding
 
 class AlquranFragment : Fragment() {
 
-    private var _binding: FragmentAlquranBinding? = null
+    private var _binding: FragmentSurahListBinding? = null
     private val binding get() = _binding!!
     private lateinit var alquranViewModel: AlquranViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAlquranBinding.inflate(inflater, container, false)
-        val repository = AlquranRepository(AlquranApiConfig.getApiService())
-        alquranViewModel = ViewModelProvider(this, AlquranViewModelFactory(repository))[AlquranViewModel::class.java]
-
+        _binding = FragmentSurahListBinding.inflate(inflater, container, false)
+        alquranViewModel = ViewModelProvider(this).get(AlquranViewModel::class.java)
         setupRecyclerView()
         observeViewModel()
-
-        alquranViewModel.fetchListSurah()
-
         return binding.root
     }
 
     private fun setupRecyclerView() {
-        binding.rvAlquran.layoutManager = LinearLayoutManager(requireContext())
-        binding.rvAlquran.adapter = AlquranAdapter(emptyList()) // Initially empty
+        binding.rvDetailSurah.layoutManager = LinearLayoutManager(requireContext())
     }
 
     private fun observeViewModel() {
         alquranViewModel.listSurah.observe(viewLifecycleOwner) { listSurah ->
-            (binding.rvAlquran.adapter as AlquranAdapter).updateData(listSurah)
+            val adapter = AlquranAdapter(listSurah) { dataItem ->
+                Toast.makeText(requireContext(), "Clicked: ${dataItem.name.translation.en}", Toast.LENGTH_SHORT).show()
+                // Add navigation to Surah Detail here
+            }
+            binding.rvDetailSurah.adapter = adapter
         }
+//
+//        alquranViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+//            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+//        }
 
-        alquranViewModel.errorMessage.observe(viewLifecycleOwner) { error ->
-            Toast.makeText(requireContext(), error, Toast.LENGTH_SHORT).show()
+        alquranViewModel.errorMessage.observe(viewLifecycleOwner) { message ->
+            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         }
     }
 

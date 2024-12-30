@@ -38,6 +38,10 @@ class HomeFragment : Fragment() {
         binding.layoutClickSchedule.setOnClickListener {
             findNavController().navigate(R.id.navigation_schedule) // Ensure the ID matches the navigation graph
         }
+        binding.layoutClickAlquran.setOnClickListener {
+            findNavController().navigate(R.id.navigation_alquran) // Ensure the ID matches the navigation graph
+        }
+
 
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()
