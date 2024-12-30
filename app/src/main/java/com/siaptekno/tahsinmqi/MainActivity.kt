@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_schedule -> {
-                    binding.toolbar.title = getString(R.string.title_schedule)
+                    binding.toolbar.title = getString(R.string.title_schedule_sholat)
                 }
 
                 else -> {
