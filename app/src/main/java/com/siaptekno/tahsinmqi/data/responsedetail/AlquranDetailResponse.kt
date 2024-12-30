@@ -61,8 +61,8 @@ data class VersesItem(
 	@field:SerializedName("translation")
 	val translation: Translation,
 
-	@field:SerializedName("tafsir")
-	val tafsir: Tafsir,
+//	@field:SerializedName("tafsir")
+//	val tafsir: Tafsir,
 
 	@field:SerializedName("text")
 	val text: Text,
@@ -70,12 +70,12 @@ data class VersesItem(
 	@field:SerializedName("audio")
 	val audio: Audio
 )
-
-data class Tafsir(
-
-	@field:SerializedName("id")
-	val id: String
-)
+//
+//data class Tafsir(
+//
+//	@field:SerializedName("id")
+//	val id: String
+//)
 
 data class Number(
 
@@ -172,8 +172,8 @@ data class Data(
 	@field:SerializedName("name")
 	val name: Name,
 
-	@field:SerializedName("tafsir")
-	val tafsir: Tafsir,
+//	@field:SerializedName("tafsir")
+//	val tafsir: Tafsir,
 
 	@field:SerializedName("preBismillah")
 	val preBismillah: Any,

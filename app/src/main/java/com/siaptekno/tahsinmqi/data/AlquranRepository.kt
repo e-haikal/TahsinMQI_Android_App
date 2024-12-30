@@ -26,27 +26,4 @@ class AlquranRepository(private val apiService: AlquranApiService) {
         })
     }
 
-    // Fetch specific Surah details
-    fun getSurahDetail(
-        surah: Int,
-        onSuccess: (AlquranDetailResponse) -> Unit,
-        onFailure: (String) -> Unit
-    ) {
-        apiService.getSpecificSurah(surah).enqueue(object : Callback<AlquranDetailResponse> {
-            override fun onResponse(
-                call: Call<AlquranDetailResponse>,
-                response: Response<AlquranDetailResponse>
-            ) {
-                if (response.isSuccessful && response.body() != null) {
-                    onSuccess(response.body()!!)
-                } else {
-                    onFailure("Failed to load data")
-                }
-            }
-
-            override fun onFailure(call: Call<AlquranDetailResponse>, t: Throwable) {
-                onFailure(t.message ?: "Unknown error")
-            }
-        })
-    }
 }

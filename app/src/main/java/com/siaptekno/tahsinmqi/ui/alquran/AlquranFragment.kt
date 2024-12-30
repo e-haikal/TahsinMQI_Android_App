@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentSurahListBinding
 
 class AlquranFragment : Fragment() {
@@ -29,7 +31,7 @@ class AlquranFragment : Fragment() {
     }
 
     private fun setupRecyclerView() {
-        binding.rvDetailSurah.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvListSurah.layoutManager = LinearLayoutManager(requireContext())
     }
 
     private fun observeViewModel() {
@@ -37,8 +39,12 @@ class AlquranFragment : Fragment() {
             val adapter = AlquranAdapter(listSurah) { dataItem ->
                 Toast.makeText(requireContext(), "Clicked: ${dataItem.name.translation.en}", Toast.LENGTH_SHORT).show()
                 // Add navigation to Surah Detail here
+                val bundle = Bundle().apply {
+                    putInt("SURAH_NUMBER", dataItem.number)
+                }
+                findNavController().navigate(R.id.action_alquranFragment_to_alquranDetailFragment, bundle)
             }
-            binding.rvDetailSurah.adapter = adapter
+            binding.rvListSurah.adapter = adapter
         }
 //
 //        alquranViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->

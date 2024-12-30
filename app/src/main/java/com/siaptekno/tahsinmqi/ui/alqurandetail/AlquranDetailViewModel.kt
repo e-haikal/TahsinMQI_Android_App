@@ -3,30 +3,34 @@ package com.siaptekno.tahsinmqi.ui.alqurandetail
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.siaptekno.tahsinmqi.data.AlquranDetailRepository
-import com.siaptekno.tahsinmqi.data.Result
-import com.siaptekno.tahsinmqi.data.responsedetail.AlquranDetailResponse
+import com.siaptekno.tahsinmqi.data.responsedetail.Data
+import com.siaptekno.tahsinmqi.data.retrofit.AlquranDetailApiConfig
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import retrofit2.awaitResponse
 
+class AlquranDetailViewModel(private val repository: AlquranDetailRepository) : ViewModel() {
 
-class AlquranDetailViewModel(private val alquranDetailRepository: AlquranDetailRepository) : ViewModel() {
+    private val _surahDetail = MutableLiveData<Data>()
+    val surahDetail: LiveData<Data> get() = _surahDetail
 
-    // LiveData to hold and observe the API result (loading, success, error)
-    private val _alquranDetail = MutableLiveData<Result<AlquranDetailResponse>>()
-    val alquranDetail: LiveData<Result<AlquranDetailResponse>> = _alquranDetail
+    private val _errorMessage = MutableLiveData<String>()
+    val errorMessage: LiveData<String> get() = _errorMessage
 
-    // Fetch Surah details based on the Surah number
-    fun getSurahDetail(surah: Int) {
-        _alquranDetail.value = Result.Loading // Show loading state
-        alquranDetailRepository.getSurahDetail(surah, ::onSuccess, ::onFailure) // Fetch details from repository
-    }
-
-    // Success callback to handle response
-    private fun onSuccess(response: AlquranDetailResponse) {
-        _alquranDetail.value = Result.Success(response) // Update LiveData with success data
-    }
-
-    // Failure callback to handle error
-    private fun onFailure(error: String) {
-        _alquranDetail.value = Result.Error(error) // Update LiveData with error message
+    fun fetchSurahDetail(surah: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                val response = AlquranDetailApiConfig.getApiService().getSpecificSurah(surah).awaitResponse()
+                if (response.isSuccessful && response.body() != null) {
+                    _surahDetail.postValue(response.body()!!.data)
+                } else {
+                    _errorMessage.postValue("Failed to fetch Surah details")
+                }
+            } catch (e: Exception) {
+                _errorMessage.postValue(e.message ?: "An error occurred")
+            }
+        }
     }
 }

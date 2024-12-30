@@ -15,6 +15,16 @@
         android:id="@+id/navigation_alquran"
         android:name="com.siaptekno.tahsinmqi.ui.alquran.AlquranFragment"
         android:label="@string/title_alquran"
+        tools:layout="@layout/fragment_surah_list">
+        <action
+            android:id="@+id/action_alquranFragment_to_alquranDetailFragment"
+            app:destination="@id/alquranDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/alquranDetailFragment"
+        android:name="com.siaptekno.tahsinmqi.ui.alqurandetail.AlquranDetailFragment"
+        android:label="fragment_alquran_detail"
         tools:layout="@layout/fragment_surah_detail" />
 
     <fragment

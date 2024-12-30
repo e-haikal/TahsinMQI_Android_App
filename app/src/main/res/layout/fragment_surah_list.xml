@@ -24,7 +24,7 @@
 <!--        app:layout_constraintGuide_begin="67dp" />-->
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_detail_surah"
+        android:id="@+id/rv_list_surah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_small"

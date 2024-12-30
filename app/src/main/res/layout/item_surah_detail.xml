@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--    Header verse start-->
     <View
         android:id="@+id/view_background"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="45dp"
         android:background="@color/light_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,7 +46,7 @@
         android:layout_height="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/img_btn_play_circle"
-        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_small"
         app:layout_constraintTop_toTopOf="@id/view_background"
         app:layout_constraintBottom_toBottomOf="@id/view_background"
         app:layout_constraintEnd_toStartOf="@id/iv_btn_stop_verse"/>
@@ -72,7 +72,8 @@
         android:text="@string/placeholder_verse_translation"
         android:textSize="@dimen/text_size_body"
         android:textColor="@color/greenish"
-        android:layout_marginVertical="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/padding_medium"
         android:layout_marginHorizontal="@dimen/margin_medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

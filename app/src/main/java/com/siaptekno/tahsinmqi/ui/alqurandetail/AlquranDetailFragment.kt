@@ -1,76 +1,78 @@
 package com.siaptekno.tahsinmqi.ui.alqurandetail
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.siaptekno.tahsinmqi.data.AlquranDetailRepository
+import com.siaptekno.tahsinmqi.data.retrofit.AlquranDetailApiConfig
 import com.siaptekno.tahsinmqi.databinding.FragmentSurahDetailBinding
-import com.siaptekno.tahsinmqi.data.Result
-import com.siaptekno.tahsinmqi.data.responsedetail.AlquranDetailResponse
-
 
 class AlquranDetailFragment : Fragment() {
 
     private var _binding: FragmentSurahDetailBinding? = null
     private val binding get() = _binding!!
-    private val alquranDetailViewModel: AlquranDetailViewModel by viewModels {
-        AlquranDetailFactory() // Use ViewModelFactory to inject the ViewModel
+    private lateinit var viewModel: AlquranDetailViewModel
+    private var surahNumber: Int = 1
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            surahNumber = it.getInt("SURAH_NUMBER", 1)
+        }
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View {
         _binding = FragmentSurahDetailBinding.inflate(inflater, container, false)
+
+        // Create repository instance
+        val repository = AlquranDetailRepository(AlquranDetailApiConfig.getApiService())
+
+        // Create the ViewModel with the repository
+        val factory = AlquranDetailFactory(repository)
+        viewModel = ViewModelProvider(this, factory)[AlquranDetailViewModel::class.java]
+
+        setupRecyclerView()
+        observeViewModel()
+        viewModel.fetchSurahDetail(surahNumber)
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        // Example Surah ID, ideally passed through arguments or navigation
-        val surahId = 1 // Example: Surah 1 (Al-Fatiha)
-
-        // Observe the AlquranDetail data from the ViewModel
-        alquranDetailViewModel.alquranDetail.observe(viewLifecycleOwner, Observer { result ->
-            when (result) {
-                is Result.Loading -> {
-                    binding.progressBar.visibility = View.VISIBLE // Show progress bar while loading
-                }
-                is Result.Success -> {
-                    binding.progressBar.visibility = View.GONE // Hide progress bar when data is loaded
-                    displaySurahDetail(result.data) // Display the Surah details
-                }
-                is Result.Error -> {
-                    binding.progressBar.visibility = View.GONE // Hide progress bar on error
-                    showError(result.error) // Show error message
-                }
-            }
-        })
-
-        // Fetch Surah details when fragment is created
-        alquranDetailViewModel.getSurahDetail(surahId)
+    private fun setupRecyclerView() {
+        binding.rvDetailSurah.layoutManager = LinearLayoutManager(requireContext())
     }
 
-    // Function to display the Surah details
-    private fun displaySurahDetail(response: AlquranDetailResponse) {
-        val verse = response.data.verses[0] // Example: Display the first verse
+    private fun observeViewModel() {
+        // Observe Surah detail data
+        viewModel.surahDetail.observe(viewLifecycleOwner) { detail ->
+            // Update UI with the fetched data
+//            binding.tvSurahName.text = detail.name.transliteration.id
+//            binding.tvSurahInfo.text =
+//                "Surah ${detail.name.translation.id} • ${detail.revelation.id} • ${detail.numberOfVerses} Ayat"
+            binding.rvDetailSurah.adapter = AlquranDetailAdapter(detail.verses)
+            binding.progressBar.visibility = View.GONE // Hide progress bar once data is loaded
+        }
 
-        binding.tvVerseNumber.text = verse.number.inSurah.toString() // Set verse number
-        binding.tvPlaceholderVerse.text = verse.text.arab // Set Arabic verse text
-        binding.tvVerseTranslation.text = verse.translation.en // Set verse translation
-    }
+        // Observe error messages
+        viewModel.errorMessage.observe(viewLifecycleOwner) { message ->
+            Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+            Log.d("AlquranDetailFragment", "Error message: $message")
+            binding.progressBar.visibility = View.GONE // Hide progress bar on error
+        }
 
-    // Function to handle error
-    private fun showError(message: String) {
-        // Handle error display (e.g., show a Toast or Snackbar)
+        // Show progress bar while data is being fetched
+        binding.progressBar.visibility = View.VISIBLE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // Clean up binding when the view is destroyed
+        _binding = null
     }
 }
