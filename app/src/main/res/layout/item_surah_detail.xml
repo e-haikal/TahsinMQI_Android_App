@@ -15,25 +15,24 @@
 
     <TextView
         android:id="@+id/tv_verse_number"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:text="@string/placeholder_verse_number"
-        android:textSize="@dimen/text_size_caption"
+        android:textSize="@dimen/text_size_overline"
         android:textStyle="bold"
         android:textAlignment="center"
         android:gravity="center_vertical"
         android:textColor="@color/greenish"
         android:layout_marginStart="@dimen/margin_medium"
         android:background="@drawable/circle_background"
-        android:padding="8dp"
         app:layout_constraintStart_toStartOf="@id/view_background"
         app:layout_constraintTop_toTopOf="@id/view_background"
         app:layout_constraintBottom_toBottomOf="@id/view_background"/>
 
     <ImageView
         android:id="@+id/iv_btn_stop_verse"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/img_btn_stop_circle"
         android:layout_marginEnd="@dimen/margin_medium"
@@ -43,8 +42,8 @@
 
     <ImageView
         android:id="@+id/iv_btn_play_verse"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/img_btn_play_circle"
         android:layout_marginEnd="@dimen/margin_medium"
