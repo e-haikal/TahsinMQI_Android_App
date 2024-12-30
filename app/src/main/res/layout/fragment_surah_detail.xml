@@ -7,7 +7,7 @@
     tools:context=".ui.alquran.AlquranFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        id="@+id/rv_alquran"
+        android:id="@+id/rv_list_surah"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
