@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.AlquranDetailRepository
 import com.siaptekno.tahsinmqi.data.retrofit.AlquranDetailApiConfig
 import com.siaptekno.tahsinmqi.databinding.FragmentSurahDetailBinding
@@ -43,6 +45,18 @@ class AlquranDetailFragment : Fragment() {
         observeViewModel()
         viewModel.fetchSurahDetail(surahNumber)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressed()
+        }
+
+        // Hide the BottomNavigationView when the user is in this fragment.
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        bottomNavigationView.visibility = View.GONE
+
     }
 
     private fun setupRecyclerView() {

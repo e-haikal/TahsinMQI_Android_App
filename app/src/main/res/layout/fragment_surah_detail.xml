@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.alqurandetail.AlquranDetailFragment">
@@ -27,7 +28,7 @@
         android:id="@+id/rv_detail_surah"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="160dp"
+        android:paddingBottom="@dimen/padding_extra_large"
         app:layout_constraintVertical_bias="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
