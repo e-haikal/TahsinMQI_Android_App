@@ -106,13 +106,13 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:contentDescription="Image for Alquran"
-                    android:src="@drawable/img_alquran" />
+                    android:src="@drawable/img_tanya_aitahsin" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="@string/title_alquran" />
+                    android:text="@string/title_tanya_ai" />
             </LinearLayout>
 
             <!-- Third menu item -->
