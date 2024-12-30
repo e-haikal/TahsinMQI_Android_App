@@ -10,6 +10,7 @@ interface AlquranApiService {
     @GET("surah")
     fun getListSurah(): Call<AlquranResponse>
 
+    // Fetch a specific Surah detail
     @GET("surah/{surah}")
     fun getSpecificSurah(@Path("surah") surah: Int): Call<AlquranResponse>
 }
