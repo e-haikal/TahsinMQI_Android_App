@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -67,6 +68,13 @@ class AlquranDetailFragment : Fragment() {
 
         binding.toolbar.setNavigationOnClickListener {
             requireActivity().onBackPressed()
+        }
+
+        // Set up the toolbar
+        binding.toolbar.title = "Surah Detail" // Default title
+        (requireActivity() as? AppCompatActivity)?.setSupportActionBar(binding.toolbar)
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
         }
 
         // Hide the BottomNavigationView when the user is in this fragment.
