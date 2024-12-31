@@ -61,5 +61,6 @@ dependencies {
     implementation(libs.logging.interceptor)
 
     implementation (libs.exoplayer)
+    implementation(libs.lottie)
 
 }
