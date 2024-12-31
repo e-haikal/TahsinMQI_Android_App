@@ -13,7 +13,7 @@
     <dimen name="text_size_overline">12sp</dimen>
 
     <!-- Padding -->
-    <dimen name="padding_extra_large">34dp</dimen>
+    <dimen name="padding_extra_large">40dp</dimen>
     <dimen name="padding_large">24dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="padding_small">8dp</dimen>
