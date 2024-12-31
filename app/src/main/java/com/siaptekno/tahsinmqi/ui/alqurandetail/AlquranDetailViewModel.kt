@@ -16,6 +16,9 @@ class AlquranDetailViewModel(private val repository: AlquranDetailRepository) : 
     private val _surahDetail = MutableLiveData<Data>()
     val surahDetail: LiveData<Data> get() = _surahDetail
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> get() = _isLoading
+
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> get() = _errorMessage
 

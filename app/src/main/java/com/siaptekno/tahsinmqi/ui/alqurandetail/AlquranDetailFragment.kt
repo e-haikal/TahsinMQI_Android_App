@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -88,6 +90,10 @@ class AlquranDetailFragment : Fragment() {
     }
 
     private fun observeViewModel() {
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            showLoading(isLoading)
+        }
+
         // Observe Surah detail data
         viewModel.surahDetail.observe(viewLifecycleOwner) { detail ->
             binding.rvDetailSurah.adapter = AlquranDetailAdapter(detail.verses, ::playAudio, ::stopAudio)
@@ -143,5 +149,7 @@ class AlquranDetailFragment : Fragment() {
         super.onDestroy()
         _binding = null
     }
-
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
 }

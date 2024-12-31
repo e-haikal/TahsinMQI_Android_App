@@ -35,9 +35,13 @@ class AlquranFragment : Fragment() {
     }
 
     private fun observeViewModel() {
+        alquranViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            showLoading(isLoading)
+        }
+
         alquranViewModel.listSurah.observe(viewLifecycleOwner) { listSurah ->
             val adapter = AlquranAdapter(listSurah) { dataItem ->
-                Toast.makeText(requireContext(), "Clicked: ${dataItem.name.translation.en}", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(requireContext(), "Clicked: ${dataItem.name.translation.en}", Toast.LENGTH_SHORT).show()
                 // Add navigation to Surah Detail here
                 val bundle = Bundle().apply {
                     putInt("SURAH_NUMBER", dataItem.number)
@@ -46,10 +50,6 @@ class AlquranFragment : Fragment() {
             }
             binding.rvListSurah.adapter = adapter
         }
-//
-//        alquranViewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
-//            binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
-//        }
 
         alquranViewModel.errorMessage.observe(viewLifecycleOwner) { message ->
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
@@ -59,5 +59,9 @@ class AlquranFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }
