@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.siaptekno.tahsinmqi.R
@@ -85,8 +86,26 @@ class AlquranDetailFragment : Fragment() {
         binding.progressBar.visibility = View.VISIBLE
     }
 
+    // Called when the fragment's view is destroyed, ensuring cleanup and visibility adjustments.
     override fun onDestroyView() {
         super.onDestroyView()
+        val navController = findNavController()
+        val destinationId = navController.currentDestination?.id
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+
+        // Show BottomNavigationView only if navigating to the HomeFragment.
+        if (destinationId == R.id.navigation_alquran) {
+            bottomNavigationView.visibility = View.VISIBLE
+        } else {
+            bottomNavigationView.visibility = View.GONE
+        }
         _binding = null
     }
+
+    // Called when the fragment is completely destroyed, clearing the binding reference.
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
 }
