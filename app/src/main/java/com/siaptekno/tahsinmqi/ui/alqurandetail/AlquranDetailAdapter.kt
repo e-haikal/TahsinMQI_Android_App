@@ -8,16 +8,23 @@ import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.responsedetail.VersesItem
 import com.siaptekno.tahsinmqi.databinding.ItemSurahDetailBinding
 
-class AlquranDetailAdapter(private val verses: List<VersesItem>) :
-    RecyclerView.Adapter<AlquranDetailAdapter.VerseViewHolder>() {
+class AlquranDetailAdapter(
+    private val verses: List<VersesItem>,
+    private val onPlayClicked: (String) -> Unit,
+    private val onStopClicked: () -> Unit
+) : RecyclerView.Adapter<AlquranDetailAdapter.VerseViewHolder>() {
 
     inner class VerseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val binding = ItemSurahDetailBinding.bind(view)
+
         fun bind(verse: VersesItem) {
             binding.tvVerseNumber.text = verse.number.inSurah.toString()
             binding.tvPlaceholderVerse.text = verse.text.arab
             binding.tvVerseTranslation.text = verse.translation.id
 
+            val audioUrl = verse.audio.primary
+            binding.ivBtnPlayVerse.setOnClickListener { onPlayClicked(audioUrl) }
+            binding.ivBtnStopVerse.setOnClickListener { onStopClicked() }
         }
     }
 
