@@ -67,10 +67,6 @@ class AlquranDetailFragment : Fragment() {
     private fun observeViewModel() {
         // Observe Surah detail data
         viewModel.surahDetail.observe(viewLifecycleOwner) { detail ->
-            // Update UI with the fetched data
-//            binding.tvSurahName.text = detail.name.transliteration.id
-//            binding.tvSurahInfo.text =
-//                "Surah ${detail.name.translation.id} • ${detail.revelation.id} • ${detail.numberOfVerses} Ayat"
             binding.rvDetailSurah.adapter = AlquranDetailAdapter(detail.verses)
             binding.progressBar.visibility = View.GONE // Hide progress bar once data is loaded
             binding.toolbar.title = detail.name.transliteration.id

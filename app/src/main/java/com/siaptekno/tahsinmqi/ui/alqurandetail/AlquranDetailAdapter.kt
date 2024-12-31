@@ -17,6 +17,7 @@ class AlquranDetailAdapter(private val verses: List<VersesItem>) :
             binding.tvVerseNumber.text = verse.number.inSurah.toString()
             binding.tvPlaceholderVerse.text = verse.text.arab
             binding.tvVerseTranslation.text = verse.translation.id
+
         }
     }
 
