@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -77,6 +76,10 @@ class JadwalSholatFragment : Fragment() {
     }
 
     private fun observeViewModel() {
+        viewModel.isLoading.observe(viewLifecycleOwner) { isLoading ->
+            showLoading(isLoading)
+        }
+
         viewModel.schedule.observe(viewLifecycleOwner) { schedule ->
             // Update UI with fetched data
             binding.tvPlaceholderLocation.text = schedule.data.lokasi
@@ -103,4 +106,7 @@ class JadwalSholatFragment : Fragment() {
         handler.removeCallbacks(timeUpdater)
     }
 
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
 }

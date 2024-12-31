@@ -19,6 +19,9 @@ class JadwalSholatViewModel : ViewModel() {
     private val _schedule = MutableLiveData<ScheduleResponse>()
     val schedule: LiveData<ScheduleResponse> = _schedule
 
+    private val _isLoading = MutableLiveData<Boolean>()
+    val isLoading: LiveData<Boolean> get() = _isLoading
+
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
 
