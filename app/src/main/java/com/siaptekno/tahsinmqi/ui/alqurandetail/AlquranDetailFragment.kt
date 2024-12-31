@@ -73,6 +73,7 @@ class AlquranDetailFragment : Fragment() {
 //                "Surah ${detail.name.translation.id} • ${detail.revelation.id} • ${detail.numberOfVerses} Ayat"
             binding.rvDetailSurah.adapter = AlquranDetailAdapter(detail.verses)
             binding.progressBar.visibility = View.GONE // Hide progress bar once data is loaded
+            binding.toolbar.title = detail.name.transliteration.id
         }
 
         // Observe error messages
