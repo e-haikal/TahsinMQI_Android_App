@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
 import java.text.SimpleDateFormat
@@ -57,6 +58,11 @@ class JadwalSholatFragment : Fragment() {
 
         // Fetch the schedule when the fragment is created
         viewModel.fetchSchedule()
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
+
     }
 
     private fun setCurrentTime() {
