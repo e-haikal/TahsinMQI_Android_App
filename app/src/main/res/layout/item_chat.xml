@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             tools:text="Baik, mari kita bahas hukum bacaan idgham bilaghunnah. Idgham bilaghunnah adalah menyambungkan dua huruf yang sama atau berbeda jenisnya dengan menghilangkan salah satu hurufnya tanpa ada gunnah. Biasanya terjadi pada huruf nun sukun bertemu dengan huruf ba'. Apakah Anda ingin contoh bacaan atau penjelasan lebih lanjut?"
             android:background="@color/cool_gray"
-            android:textColor="@color/greenish"
+            android:textColor="@color/muted_green"
             android:textSize="18sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 

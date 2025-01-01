@@ -54,7 +54,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:layout_toStartOf="@+id/iv_send"
-            android:hint="Ketik pertanyaan Anda">
+            android:hint="@string/title_tanya_ai">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ev_send"
