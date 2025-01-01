@@ -63,4 +63,13 @@ dependencies {
     implementation (libs.exoplayer)
     implementation(libs.lottie)
 
+    //Gemini AI
+    // add the dependency for the Google AI client SDK for Android
+    implementation("com.google.ai.client.generativeai:generativeai:0.1.2")
+
+    //circuler image
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 }

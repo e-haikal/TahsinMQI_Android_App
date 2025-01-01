@@ -9,4 +9,8 @@
     <color name="red">#E10038</color> <!-- Alert/action color -->
     <color name="light_gray">#F2F2F2</color> <!-- Light gray background / used as Bg button area-->
 
+    <color name="pink">#ed4f5c</color>
+    <color name="grey">#e7eaed</color>
+    <color name="main_color">#13A795</color>
+    <color name="color_left">#E8EAF0</color>
 </resources>

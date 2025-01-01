@@ -1,5 +1,6 @@
 package com.siaptekno.tahsinmqi.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentHomeBinding
+import com.siaptekno.tahsinmqi.ui.geminiaichat.ChatActivity
 
 class HomeFragment : Fragment() {
 
@@ -38,10 +40,14 @@ class HomeFragment : Fragment() {
         binding.layoutClickSchedule.setOnClickListener {
             findNavController().navigate(R.id.navigation_schedule) // Ensure the ID matches the navigation graph
         }
+//        binding.layoutClickAlquran.setOnClickListener {
+//            findNavController().navigate(R.id.navigation_alquran) // Ensure the ID matches the navigation graph
+//        }
+        // Set up the click listener for the Chat Activity navigation
         binding.layoutClickAlquran.setOnClickListener {
-            findNavController().navigate(R.id.navigation_alquran) // Ensure the ID matches the navigation graph
+            val intent = Intent(requireContext(), ChatActivity::class.java)
+            startActivity(intent)
         }
-
 
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()
