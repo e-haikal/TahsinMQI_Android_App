@@ -72,4 +72,7 @@ dependencies {
 
     // Lifecycles only (without ViewModel or LiveData)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+    implementation (libs.core)
+
 }

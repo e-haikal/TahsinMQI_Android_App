@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.siaptekno.tahsinmqi.databinding.ItemChatBinding
+import io.noties.markwon.Markwon
+
 
 class MessageAdapter : RecyclerView.Adapter<ViewHolder>() {
     private val messages = mutableListOf<Pair<String,Int>>()
@@ -39,6 +41,10 @@ class MessageAdapter : RecyclerView.Adapter<ViewHolder>() {
             binding.leftChatTextView.text = message.first
             binding.leftChatView.visibility = View.VISIBLE
             binding.profileImage.visibility = View.VISIBLE
+
+            // Process Markdown content and display it
+            val markwon = Markwon.create(binding.leftChatTextView.context)
+            markwon.setMarkdown(binding.leftChatTextView, message.first)
         }
     }
 
