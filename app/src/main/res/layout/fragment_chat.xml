@@ -6,6 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.geminiaichat.ChatFragment">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/title_tanya_ai"
+        app:navigationIcon="@drawable/ic_back_24"
+        android:background="@color/greenish"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="67dp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_chat"
         android:layout_width="0dp"
@@ -16,7 +33,7 @@
         app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -37,7 +54,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="8dp"
             android:layout_toStartOf="@+id/iv_send"
-            android:hint="Type a message">
+            android:hint="Ketik pertanyaan Anda">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ev_send"
@@ -52,7 +69,7 @@
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_margin="8dp"
-            android:src="@drawable/baseline_near_me_24" />
+            android:src="@drawable/img_send" />
     </RelativeLayout>
 
     <ProgressBar

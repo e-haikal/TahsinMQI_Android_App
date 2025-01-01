@@ -10,11 +10,10 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_margin="8dp"
-        android:src="@drawable/gemini"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
+        android:src="@drawable/img_chatbot"
         android:padding="4dp"
         android:visibility="visible"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,10 +26,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg_left"
-        android:backgroundTint="@color/color_left"
+        android:backgroundTint="@color/cool_gray"
+
         android:orientation="horizontal"
         android:padding="8dp"
         android:visibility="visible"
+        app:layout_constraintVertical_bias="0"
         app:layout_constraintBottom_toBottomOf="@+id/profile_image"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
         app:layout_constraintTop_toTopOf="@+id/profile_image">
@@ -39,9 +40,9 @@
             android:id="@+id/left_chat_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Hello"
-            android:background="#E8EAF0"
-            android:textColor="#2A7269"
+            tools:text="Baik, mari kita bahas hukum bacaan idgham bilaghunnah. Idgham bilaghunnah adalah menyambungkan dua huruf yang sama atau berbeda jenisnya dengan menghilangkan salah satu hurufnya tanpa ada gunnah. Biasanya terjadi pada huruf nun sukun bertemu dengan huruf ba'. Apakah Anda ingin contoh bacaan atau penjelasan lebih lanjut?"
+            android:background="@color/cool_gray"
+            android:textColor="@color/greenish"
             android:textSize="18sp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -53,7 +54,7 @@
         android:layout_marginEnd="8dp"
         android:visibility="visible"
         android:background="@drawable/bg_right"
-        android:backgroundTint="@color/main_color"
+        android:backgroundTint="@color/greenish"
         android:padding="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
@@ -64,11 +65,10 @@
             android:id="@+id/right_chat_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Saya ingin belajar Tahsin"
-            android:textColor="#E8EAF0"
-            android:background="@color/main_color"
+            tools:text="Saya ingin belajar tentang hukum bacaan idgham bilaghunnah."
+            android:textColor="@color/cool_gray"
+            android:background="@color/greenish"
             android:textSize="18sp" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

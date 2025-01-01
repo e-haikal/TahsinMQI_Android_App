@@ -2,15 +2,14 @@
 <resources>
     <color name="black">#FF000000</color> <!-- Text or high contrast element -->
     <color name="white">#FFFFFFFF</color> <!-- Background or text color -->
+    <color name="smoke_white">#F7F7F7</color> <!-- Background or text color -->
 
     <color name="greenish">#13A795</color> <!-- Primary color -->
+    <color name="greenish_blue">#20AB9A</color> <!-- For text with smoke white background -->
     <color name="teal_green">#108E7F</color> <!-- Secondary color -->
     <color name="yellow">#FFB200</color> <!-- Ornament color -->
     <color name="red">#E10038</color> <!-- Alert/action color -->
     <color name="light_gray">#F2F2F2</color> <!-- Light gray background / used as Bg button area-->
+    <color name="cool_gray">#E8EAF0</color> <!-- Light gray background / used as Bg button area-->
 
-    <color name="pink">#ed4f5c</color>
-    <color name="grey">#e7eaed</color>
-    <color name="main_color">#13A795</color>
-    <color name="color_left">#E8EAF0</color>
 </resources>
