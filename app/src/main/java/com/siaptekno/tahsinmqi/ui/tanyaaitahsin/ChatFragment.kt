@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.geminiaichat
+package com.siaptekno.tahsinmqi.ui.tanyaaitahsin
 
 import android.content.Context
 import android.os.Bundle
@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.ai.client.generativeai.GenerativeModel
 import com.siaptekno.tahsinmqi.databinding.FragmentChatBinding
@@ -45,6 +46,9 @@ class ChatFragment : Fragment() {
         sendMessage()
         observe()
 
+        binding.toolbar.setNavigationOnClickListener {
+            requireActivity().onBackPressedDispatcher.onBackPressed()
+        }
     }
 
     private fun setAdapter() {

@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.geminiaichat
+package com.siaptekno.tahsinmqi.ui.tanyaaitahsin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

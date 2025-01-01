@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.geminiaichat
+package com.siaptekno.tahsinmqi.ui.tanyaaitahsin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,12 +14,11 @@ class ChatActivity : AppCompatActivity() {
         _binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Replace fragment without adding to back stack
         val fragment = ChatFragment()
-
-        val ft : FragmentTransaction = supportFragmentManager.beginTransaction()
-
-        ft.replace(R.id.ft,fragment)
-            .addToBackStack(null)
-            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN).commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.ft, fragment)
+            .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+            .commit()
     }
 }

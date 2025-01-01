@@ -5,13 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentHomeBinding
-import com.siaptekno.tahsinmqi.ui.geminiaichat.ChatActivity
+import com.siaptekno.tahsinmqi.ui.tanyaaitahsin.ChatActivity
 
 class HomeFragment : Fragment() {
 

@@ -21,7 +21,7 @@
             android:theme="@style/Theme.TahsinMQI.NoActionBar" />
 
         <activity
-            android:name=".ui.geminiaichat.ChatActivity"
+            android:name=".ui.tanyaaitahsin.ChatActivity"
             android:exported="false"
             android:theme="@style/Theme.TahsinMQI.NoActionBar" />
 

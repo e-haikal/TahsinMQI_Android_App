@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.geminiaichat
+package com.siaptekno.tahsinmqi.ui.tanyaaitahsin
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
