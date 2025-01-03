@@ -4,6 +4,8 @@
     <string name="title_alquran">Al-Qur\'an</string>
     <string name="title_tanya_ai">Tanya AiTahsin</string>
     <string name="title_material">Materi</string>
+    <string name="title_show_material">Lihat Materi</string>
+    <string name="title_show_all_material">Lihat Semua</string>
     <string name="title_schedule">Jadwal </string>
     <string name="title_schedule_sholat">Jadwal Sholat</string>
     <string name="title_date">Tanggal</string>

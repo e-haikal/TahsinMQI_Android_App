@@ -141,5 +141,37 @@
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 
+    <TextView
+        android:id="@+id/tv_material"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_material"
+        android:textSize="@dimen/text_size_heading_large"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <TextView
+        android:id="@+id/tv_see_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_show_all_material"
+        android:textColor="@color/greenish"
+        android:textSize="@dimen/text_size_caption"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginEnd="@dimen/margin_medium"
+        app:layout_constraintStart_toEndOf="@id/tv_material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_material"
+        app:layout_constraintBottom_toBottomOf="@id/tv_material"
+        app:layout_constraintVertical_bias="0.5"
+        app:layout_constraintHorizontal_bias="1"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
