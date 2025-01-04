@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_tentang_tajwid">Tentang Tajwid</string>
+    <!-- Material Titles -->
+    <string name="material_title_1">Tentang Tajwid</string>
+    <string name="material_title_2">Makharijul Huruf</string>
+    <string name="material_title_3">Sifat Huruf</string>
+    <string name="material_title_4">Hukum Bacaan</string>
+    <string name="material_title_5">Hukum Idgham</string>
+    <string name="material_title_6">Lam Ta’rif</string>
+    <string name="material_title_7">Hukum Mad</string>
+    <string name="material_title_8">Tafkhim &amp; Tarqiq</string>
+    <string name="material_title_9">Tanda Waqaf</string>
+    <string name="material_title_10">Ayat Gharibah</string>
+    <string name="material_title_11">Huruf Muqatha’ah</string>
 
+    <!-- Material Descriptions -->
+    <string name="material_desc_1">Makna dari ilmu tahsin dan tajwid</string>
+    <string name="material_desc_2">Tempat keluarnya huruf-huruf Hijaiyah</string>
+    <string name="material_desc_3">Sifat-sifat yang terdapat pada huruf Hijaiyah</string>
+    <string name="material_desc_4">Hukum bacaan Nun Sukun atau Tanwin &amp; Mim Sukun</string>
+    <string name="material_desc_5">Jenis-jenis Idgham dari sisi makhraj dan sifatnya</string>
+    <string name="material_desc_6">Lam Syamsiah dan Lam Qomariah</string>
+    <string name="material_desc_7">Tanda Panjang dalam bacaan Al-Qur’an</string>
+    <string name="material_desc_8">Bacaan yang tebal dan tipis dalam Al-Qur’an</string>
+    <string name="material_desc_9">Tanda berhenti dalam bacaan Al-Qur’an</string>
+    <string name="material_desc_10">Ayat-ayat yang asing dalam Al-Quran</string>
+    <string name="material_desc_11">Cara membaca huruf tanpa harakat yang biasa ditemui di awal surah</string>
 </resources>
