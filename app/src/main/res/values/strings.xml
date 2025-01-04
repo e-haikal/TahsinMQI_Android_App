@@ -37,8 +37,8 @@
     <string name="placeholder_verse_number">000</string>
     <string name="placeholder_verse">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</string>
     <string name="placeholder_verse_translation">In the Name of Allah—the Most Compassionate, Most Mercifulِ</string>
-
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -34,6 +34,13 @@
         tools:layout="@layout/fragment_surah_detail" >
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_material"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.FragmentMateriBab1"
+        android:label="@string/title_schedule"
+        tools:layout="@layout/fragment_materi_bab_1" >
+    </fragment>
+
 
 
 </navigation>

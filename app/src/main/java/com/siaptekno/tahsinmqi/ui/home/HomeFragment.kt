@@ -48,6 +48,10 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.layoutClickMaterial.setOnClickListener {
+            findNavController().navigate(R.id.navigation_material) // Ensure the ID matches the navigation graph
+        }
+
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()
 
