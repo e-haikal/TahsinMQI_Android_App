@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,10 +19,12 @@
 
     <!--    Fragment Pemasukan/Pengeluaran-->
     <LinearLayout
+        android:id="@+id/ll_material_nav_chapter_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
         android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         android:paddingStart="@dimen/padding_medium"
         android:paddingEnd="@dimen/padding_medium">
 
@@ -104,7 +106,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"></androidx.fragment.app.FragmentContainerView>
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_material_nav_chapter_two"></androidx.fragment.app.FragmentContainerView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:adjustViewBounds="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fc_material_chapter_two"
+        app:layout_constraintVertical_bias="1"
+        android:src="@drawable/material_makhraj_halqi"/>
 
 
-</LinearLayout></LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout></LinearLayout>
