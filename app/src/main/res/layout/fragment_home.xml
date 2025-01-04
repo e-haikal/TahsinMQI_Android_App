@@ -171,7 +171,18 @@
         app:layout_constraintVertical_bias="0.5"
         app:layout_constraintHorizontal_bias="1"/>
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_materi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_materi"
+        android:clipChildren="true"
+        android:clipToPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_material"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="160dp"
+        android:layout_marginStart="@dimen/margin_medium"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
