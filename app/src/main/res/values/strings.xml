@@ -41,5 +41,16 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--    Title for Material section-->
+    <string name="title_material_al_jauf">Al-Jauf - Rongga Mulut</string>
+    <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
+
+    <!--    Sub-title for Chapter Two Material section-->
+    <string name="alif_sub_title">ا</string>
+    <string name="ha_tebal_sub_title">ه</string>
+    <string name="ain_sub_title">ع</string>
+    <string name="ha_tipis_sub_title">ح</string>
+    <string name="ghain_sub_title">غ</string>
+    <string name="kho_sub_title">خ</string>
 
 </resources>
