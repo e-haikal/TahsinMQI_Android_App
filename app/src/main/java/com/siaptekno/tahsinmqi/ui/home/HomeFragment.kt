@@ -52,6 +52,11 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.navigation_material) // Ensure the ID matches the navigation graph
         }
 
+        binding.tvSeeMore.setOnClickListener {
+            findNavController().navigate(R.id.navigation_sub_material_chapter_two) // Ensure the ID matches the navigation graph
+        }
+
+
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()
 

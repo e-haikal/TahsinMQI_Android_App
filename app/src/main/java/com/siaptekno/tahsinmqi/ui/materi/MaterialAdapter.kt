@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.siaptekno.tahsinmqi.R
-import com.siaptekno.tahsinmqi.data.Material
+import com.siaptekno.tahsinmqi.data.material.Material
 
 class MaterialAdapter(private val materialList: List<Material>) :
     RecyclerView.Adapter<MaterialAdapter.MaterialViewHolder>() {

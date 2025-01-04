@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Sub Material Titles for Chapter Two materials -->
+    <string name="sub_material_title_1">الجَوْفُ</string>
+    <string name="sub_material_title_2">الحَلْقُ</string>
+    <string name="sub_material_title_3">الِّلسَانُ</string>
+    <string name="sub_material_title_4">الِّلسَانُ</string>
+    <string name="sub_material_title_5">الِّلسَانُ</string>
+    <string name="sub_material_title_6">الشَّفَتَانِ</string>
+    <string name="sub_material_title_7">الخَيْشُوْمُ</string>
+
+    <!-- Sub Material Descriptions for Chapter Two materials -->
+    <string name="sub_material_desc_1">al-Jauf - Rongga Mulut</string>
+    <string name="sub_material_desc_2">al-Halqu - Tenggorokan</string>
+    <string name="sub_material_desc_3">al-Lisaanu - Lidah (depan)</string>
+    <string name="sub_material_desc_4">al-Lisaanu - Lidah (tengah)</string>
+    <string name="sub_material_desc_5">al-Lisaanu - Lidah (belakang)</string>
+    <string name="sub_material_desc_6">asy-Syafataani - Kedua Bibir</string>
+    <string name="sub_material_desc_7">al-Khaysyuum - Pangkal Hidung</string>
+</resources>

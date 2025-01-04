@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.siaptekno.tahsinmqi.R
-import com.siaptekno.tahsinmqi.data.Material
+import com.siaptekno.tahsinmqi.data.material.Material
 
 class MaterialFragment : Fragment() {
 
