@@ -172,7 +172,7 @@
         app:layout_constraintHorizontal_bias="1"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_materi"
+        android:id="@+id/rv_materi_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/item_materi"
