@@ -53,13 +53,35 @@
         <string name="content_aljauf_ain_and_ha_kecil">Huruf yang keluar dari tenggorokan tengah adalah ‘Ain (ع) dan Ha kecil (ح).</string>
         <string name="content_aljauf_ghain_and_kha">Huruf yang keluar dari tenggorokan atas adalah ghain (غ), kha (خ).</string>
     <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
+    
+    <string name="title_material_al_lisan_depan">Al-Lisan - Lidan (depan)</string>
+        <string name=""    
+    
+    <string name="title_material_al_lisan_tengah">Al-Lisan - Lidan (tengah)</string>
+    <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
 
-    <!--    Sub-title for Chapter Two Material section-->
+    <!--    Sub-title for Chapter Two Material section - Al-halq-->
     <string name="alif_sub_title">ا</string>
     <string name="ha_tebal_sub_title">ه</string>
     <string name="ain_sub_title">ع</string>
     <string name="ha_tipis_sub_title">ح</string>
     <string name="ghain_sub_title">غ</string>
     <string name="kho_sub_title">خ</string>
+
+    <!--    Sub-title for Chapter Two Material section - Al-lisan depan-->
+    <string name="ta_sub_title">ت</string>
+    <string name="dal_sub_title">د</string>
+    <string name="tho_sub_title">ط</string>
+    <string name="tsa_sub_title">ث</string>
+    <string name="dzal_sub_title">ذ</string>
+    <string name="dzo_sub_title">ظ</string>
+    <string name="sin_sub_title">س</string>
+    <string name="zai_sub_title">ز</string>
+    <string name="shod_sub_title">ص</string>
+
+
+
+
+
 
 </resources>
