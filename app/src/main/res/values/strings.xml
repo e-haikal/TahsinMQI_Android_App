@@ -48,7 +48,9 @@
 
     <!--    Title for Material section-->
     <string name="title_material_al_jauf">Al-Jauf - Rongga Mulut</string>
-        <string name="content_aljauf_hamzah_and_ha">Huruf yang keluar dari tenggorokan bawah adalah Hamzah (ء), Ha besar (ه).</string>
+        <string name="content_aljauf_hamzah_and_ha_besar">Huruf yang keluar dari tenggorokan bawah adalah Hamzah (ء), Ha besar (ه).</string>
+        <string name="content_aljauf_ain_and_ha_kecil">Huruf yang keluar dari tenggorokan tengah adalah ‘Ain (ع) dan Ha kecil (ح).</string>
+        <string name="content_aljauf_ghain_and_kha">Huruf yang keluar dari tenggorokan atas adalah ghain (غ), kha (خ).</string>
     <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
 
     <!--    Sub-title for Chapter Two Material section-->
