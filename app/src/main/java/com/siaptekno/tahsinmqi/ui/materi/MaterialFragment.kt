@@ -49,7 +49,17 @@ class MaterialFragment : Fragment() {
             Material(11, getString(R.string.material_title_11), getString(R.string.material_desc_11))
         )
 
-        val adapter = MaterialAdapter(materials)
+        val adapter = MaterialAdapter(materials) { material ->
+            // Handle item click here
+            when (material.id) {
+                1 -> findNavController().navigate(R.id.action_materialFragment_to_subMaterialChapterOneFragment)
+                2 -> findNavController().navigate(R.id.action_materialFragment_to_subMaterialChapterTwoFragment)
+                // Add more cases for additional materials
+            }
+        }
+
+
+
         recyclerView.adapter = adapter
 
         binding.toolbar.setNavigationOnClickListener {

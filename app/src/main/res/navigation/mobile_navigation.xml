@@ -39,6 +39,19 @@
         android:name="com.siaptekno.tahsinmqi.ui.materi.MaterialFragment"
         android:label="@string/title_material"
         tools:layout="@layout/fragment_materi" >
+        <action
+            android:id="@+id/action_materialFragment_to_subMaterialChapterOneFragment"
+            app:destination="@id/navigation_sub_material_chapter_one" />
+        <action
+            android:id="@+id/action_materialFragment_to_subMaterialChapterTwoFragment"
+            app:destination="@id/navigation_sub_material_chapter_two" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_sub_material_chapter_one"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_one.SubMaterialChapterOneFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_sub_materi_chapter_1" >
     </fragment>
 
     <fragment
