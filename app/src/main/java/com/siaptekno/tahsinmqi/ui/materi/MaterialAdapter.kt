@@ -25,8 +25,7 @@ class MaterialAdapter(private val materialList: List<Material>,
 
     override fun getItemCount(): Int = materialList.size
 
-    class MaterialViewHolder(itemView: View,
-                             private val onItemClick: (Material) -> Unit) : RecyclerView.ViewHolder(itemView) {
+    class MaterialViewHolder(itemView: View, private val onItemClick: (Material) -> Unit) : RecyclerView.ViewHolder(itemView) {
         private val titleTextView: TextView = itemView.findViewById(R.id.tv_item_name)
         private val descTextView: TextView = itemView.findViewById(R.id.tv_item_description)
 

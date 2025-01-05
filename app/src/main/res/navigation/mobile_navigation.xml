@@ -47,6 +47,7 @@
             app:destination="@id/navigation_sub_material_chapter_two" />
     </fragment>
 
+    <!--    Materi chapter one-->
     <fragment
         android:id="@+id/navigation_sub_material_chapter_one"
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_one.SubMaterialChapterOneFragment"
@@ -54,12 +55,38 @@
         tools:layout="@layout/fragment_sub_materi_chapter_1" >
     </fragment>
 
+
+    <!--    Materi chapter two - list materi-->
     <fragment
         android:id="@+id/navigation_sub_material_chapter_two"
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.SubMaterialChapterTwoFragment"
         android:label="@string/title_sub_material_chapter_two"
         tools:layout="@layout/fragment_sub_materi_chapter_2" >
+        <action
+            android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_jauf"
+            app:destination="@id/navigation_sub_material_chapter_two_al_jauf" />
+        <action
+            android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_halq"
+            app:destination="@id/navigation_sub_material_chapter_two_al_halq" />
     </fragment>
+
+
+    <!--    Materi chapter two - Al-jauf-->
+    <fragment
+        android:id="@+id/navigation_sub_material_chapter_two_al_jauf"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_jauf.MateriAlJaufFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_materi_al_jauf" >
+    </fragment>
+
+    <!--    Materi chapter two - Al-halq-->
+    <fragment
+        android:id="@+id/navigation_sub_material_chapter_two_al_halq"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_halq.MateriAlHalqFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_materi_al_halq" >
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_testing"

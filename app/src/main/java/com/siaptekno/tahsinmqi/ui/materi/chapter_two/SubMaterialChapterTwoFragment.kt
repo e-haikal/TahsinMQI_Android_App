@@ -44,7 +44,15 @@ class SubMaterialChapterTwoFragment : Fragment() {
 
         )
 
-        val adapter = SubMaterialChapterTwoAdapter(materials)
+        val adapter = SubMaterialChapterTwoAdapter(materials) { material ->
+            when (material.id) {
+                1 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_jauf)
+                2 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_halq)
+            }
+
+        }
+
+
         recyclerView.adapter = adapter
 
 
