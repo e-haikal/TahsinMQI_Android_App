@@ -48,8 +48,8 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.layoutClickMaterial.setOnClickListener {
-            findNavController().navigate(R.id.navigation_material) // Ensure the ID matches the navigation graph
+        binding.layoutClickTesting.setOnClickListener {
+            findNavController().navigate(R.id.navigation_testing) // Ensure the ID matches the navigation graph
         }
 
         binding.tvSeeMore.setOnClickListener {

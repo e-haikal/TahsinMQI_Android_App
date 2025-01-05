@@ -48,5 +48,12 @@
         tools:layout="@layout/fragment_sub_materi_chapter_2" >
     </fragment>
 
+    <fragment
+        android:id="@+id/navigation_testing"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_one.SubMaterialChapterOneFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_sub_materi_chapter_2" >
+    </fragment>
+
 
 </navigation>

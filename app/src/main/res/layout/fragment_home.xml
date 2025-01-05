@@ -72,7 +72,7 @@
 
             <!-- First menu item -->
             <LinearLayout
-                android:id="@+id/layout_click_material"
+                android:id="@+id/layout_click_testing"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
