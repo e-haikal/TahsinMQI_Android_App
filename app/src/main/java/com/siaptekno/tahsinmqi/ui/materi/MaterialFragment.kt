@@ -23,7 +23,6 @@ class MaterialFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         // Inflate the layout using the binding class
         _binding = FragmentMateriBinding.inflate(inflater, container, false)
         return binding.root
@@ -58,8 +57,6 @@ class MaterialFragment : Fragment() {
             }
         }
 
-
-
         recyclerView.adapter = adapter
 
         binding.toolbar.setNavigationOnClickListener {
@@ -69,5 +66,21 @@ class MaterialFragment : Fragment() {
         // Hide the BottomNavigationView when the user is in this fragment.
         val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
         bottomNavigationView.visibility = View.GONE
+    }
+
+    // Called when the fragment's view is destroyed, ensuring cleanup and visibility adjustments.
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val navController = findNavController()
+        val destinationId = navController.currentDestination?.id
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+
+        // Show BottomNavigationView only if navigating to the HomeFragment.
+        if (destinationId == R.id.navigation_home) {
+            bottomNavigationView.visibility = View.VISIBLE
+        } else {
+            bottomNavigationView.visibility = View.GONE
+        }
+        _binding = null
     }
 }

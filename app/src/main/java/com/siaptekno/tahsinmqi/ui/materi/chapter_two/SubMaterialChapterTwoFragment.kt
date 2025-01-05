@@ -5,19 +5,26 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.material.chapterTwo.SubMaterialChapterTwo
+import com.siaptekno.tahsinmqi.databinding.FragmentMateriBinding
+import com.siaptekno.tahsinmqi.databinding.FragmentSubMateriChapter2Binding
 import com.siaptekno.tahsinmqi.ui.materi.MaterialAdapter
 
 class SubMaterialChapterTwoFragment : Fragment() {
+    // Binding for the fragment's layout. Nullable to handle lifecycle management properly.
+    private var _binding : FragmentSubMateriChapter2Binding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_sub_materi_chapter_2, container, false)
+        _binding = FragmentSubMateriChapter2Binding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,5 +46,11 @@ class SubMaterialChapterTwoFragment : Fragment() {
 
         val adapter = SubMaterialChapterTwoAdapter(materials)
         recyclerView.adapter = adapter
+
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
+
     }
 }
