@@ -31,7 +31,7 @@
         android:id="@+id/navigation_schedule"
         android:name="com.siaptekno.tahsinmqi.ui.schedule.JadwalSholatFragment"
         android:label="@string/title_schedule"
-        tools:layout="@layout/fragment_surah_detail" >
+        tools:layout="@layout/fragment_jadwal_sholat" >
     </fragment>
 
     <fragment

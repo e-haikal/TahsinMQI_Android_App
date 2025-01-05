@@ -5,18 +5,28 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.material.Material
+import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
+import com.siaptekno.tahsinmqi.databinding.FragmentMateriBinding
 
 class MaterialFragment : Fragment() {
+    // Binding for the fragment's layout. Nullable to handle lifecycle management properly.
+    private var _binding : FragmentMateriBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_materi, container, false)
+
+        // Inflate the layout using the binding class
+        _binding = FragmentMateriBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -41,5 +51,13 @@ class MaterialFragment : Fragment() {
 
         val adapter = MaterialAdapter(materials)
         recyclerView.adapter = adapter
+
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
+
+        // Hide the BottomNavigationView when the user is in this fragment.
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        bottomNavigationView.visibility = View.GONE
     }
 }

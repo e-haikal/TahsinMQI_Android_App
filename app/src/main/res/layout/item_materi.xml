@@ -19,6 +19,7 @@
             android:id="@+id/iv_material_item"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:padding="@dimen/padding_small"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:src="@drawable/img_placeholder_greenish"/>
