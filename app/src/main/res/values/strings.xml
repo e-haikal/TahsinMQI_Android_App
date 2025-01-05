@@ -55,8 +55,10 @@
     <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
     
     <string name="title_material_al_lisan_depan">Al-Lisan - Lidan (depan)</string>
-        <string name=""    
-    
+        <string name="content_allisan_ta_dal_tho">Posisi makhraj Tha’, Dal dan Ta’ ( ط،د،ت ) adalah ujung lidah bersama pangkal-pangkal gigi-gigi seri bagian atas.</string>
+        <string name="content_allisan_za_zal_tsa_">Posisi makhraj Tsa’, Żal, Ẓa’ ( ظ،ذ،ث ) adalah ujung lidah dengan ujung gigi seri bagian atas.</string>
+        <string name="content_allisan_sin_zai_shad">Posisi makhraj Sin, Za’, Shad ( ص،ز,س ) adalah ujung lidah bersama lapisan bagian dalam gigi-gigi seri bagian bawah. Huruf keluar dari atasnya melalui gigi-gigi seri bagian atas dan bawah</string>
+
     <string name="title_material_al_lisan_tengah">Al-Lisan - Lidan (tengah)</string>
     <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
 
