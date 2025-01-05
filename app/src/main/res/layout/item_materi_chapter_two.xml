@@ -24,7 +24,7 @@
             android:src="@drawable/img_placeholder_greenish"/>
 
         <TextView
-            android:id="@+id/tv_item_name"
+            android:id="@+id/tv_item_name_chapter_two"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:visibility="visible"
@@ -38,7 +38,7 @@
             app:layout_constraintBottom_toTopOf="@+id/tv_item_description" />
 
         <TextView
-            android:id="@+id/tv_item_description"
+            android:id="@+id/tv_item_description_chapter_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"

@@ -26,12 +26,13 @@
         android:id="@+id/rv_materi_all"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/item_materi"
         android:clipChildren="true"
         android:clipToPadding="true"
-        app:layout_constraintTop_toBottomOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
+        android:paddingBottom="160dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:paddingBottom="160dp"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        tools:listitem="@layout/item_materi" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
