@@ -21,6 +21,10 @@
         android:id="@+id/tab_layout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/light_yellow"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/smoke_white"
+        android:backgroundTint="@color/greenish"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -34,90 +38,90 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!--    Fragment Material Pager-->
-    <LinearLayout
-        android:id="@+id/ll_material_nav_chapter_two"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:paddingStart="@dimen/padding_medium"
-        android:paddingEnd="@dimen/padding_medium">
+    <!--    Tab indicator for opened material-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ll_material_nav_chapter_two"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tab_layout"-->
+<!--        android:paddingStart="@dimen/padding_medium"-->
+<!--        android:paddingEnd="@dimen/padding_medium">-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_hamzah"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/alif_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_hamzah"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/alif_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_ha_tebal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/ha_tebal_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_ha_tebal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/ha_tebal_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_ain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/ain_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_ain"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/ain_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_ha_tipis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/ha_tipis_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_ha_tipis"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/ha_tipis_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_ghain"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/ghain_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_ghain"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/ghain_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_kho_tebal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="@color/greenish"
-            android:fontFamily="@font/uthmani_bold"
-            android:text="@string/kho_sub_title"
-            android:textSize="@dimen/text_size_heading_small"
-            android:textStyle="bold"
-            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>
-    </LinearLayout>
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btn_kho_tebal"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:backgroundTint="@color/greenish"-->
+<!--            android:fontFamily="@font/uthmani_bold"-->
+<!--            android:text="@string/kho_sub_title"-->
+<!--            android:textSize="@dimen/text_size_heading_small"-->
+<!--            android:textStyle="bold"-->
+<!--            app:cornerRadius="0dp"></com.google.android.material.button.MaterialButton>-->
+<!--    </LinearLayout>-->
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fc_material_chapter_two"
@@ -127,7 +131,7 @@
         android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ll_material_nav_chapter_two"></androidx.fragment.app.FragmentContainerView>
+        app:layout_constraintTop_toBottomOf="@id/vp_material_chapter_two"></androidx.fragment.app.FragmentContainerView>
 
     <ImageView
         android:layout_width="match_parent"
