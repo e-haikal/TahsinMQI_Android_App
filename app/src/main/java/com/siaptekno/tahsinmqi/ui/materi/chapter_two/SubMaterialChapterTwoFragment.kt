@@ -52,13 +52,14 @@ class SubMaterialChapterTwoFragment : Fragment() {
 
         }
 
-
         recyclerView.adapter = adapter
-
 
         binding.toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
         }
-
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

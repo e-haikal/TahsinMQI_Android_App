@@ -5,36 +5,51 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.siaptekno.tahsinmqi.R
+import com.siaptekno.tahsinmqi.databinding.FragmentMateriAlHalqBinding
 
 class MateriAlHalqFragment : Fragment() {
+
+    // Binding for the fragment's layout
+    private var _binding: FragmentMateriAlHalqBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_materi_al_halq, container, false)
+    ): View {
+        // Inflate the layout using View Binding
+        _binding = FragmentMateriAlHalqBinding.inflate(inflater, container, false)
+        return binding.root
+    }
 
-        val viewPager = view.findViewById<ViewPager2>(R.id.vp_material_chapter_two)
-        val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Set up adapter for ViewPager2
+        // Set up ViewPager2 and TabLayout
         val adapter = MateriAlHalqAdapter(requireActivity())
-        viewPager.adapter = adapter
+        binding.vpMaterialChapterTwo.adapter = adapter
 
-        // Set up TabLayout with ViewPager2
         val tabTitles = listOf(
             getString(R.string.alif_sub_title),
             getString(R.string.ha_tebal_sub_title)
-            // Add more titles if you add more fragments in the adapter
         )
-        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+        TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterTwo) { tab, position ->
             tab.text = tabTitles[position]
         }.attach()
 
-        return view
+        // Set up navigation for the toolbar
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp() // Navigate back to the previous fragment
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
