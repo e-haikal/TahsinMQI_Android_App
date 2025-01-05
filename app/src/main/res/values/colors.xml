@@ -14,4 +14,7 @@
     <color name="cool_gray">#E8EAF0</color> <!-- bg for chat aiTahsin-->
     <color name="muted_green">#6F7D8D</color> <!-- text chat aiTahsin -->
 
+<!--    only for material-->
+    <color name="peachy">#FACDA3</color> <!-- bg for btn container aiTahsin-->
+    <color name="light_yellow">#FFFAC3</color> <!-- bg text for material -->
 </resources>

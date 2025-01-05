@@ -41,8 +41,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!--    Title for action material section-->
+    <string name="audio">Audio</string>
+    <string name="contoh">Contoh</string>
+    <string name="stop">Stop</string>
+
     <!--    Title for Material section-->
     <string name="title_material_al_jauf">Al-Jauf - Rongga Mulut</string>
+        <string name="content_aljauf_hamzah_and_ha">Huruf yang keluar dari tenggorokan bawah adalah Hamzah (ء), Ha besar (ه).</string>
     <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
 
     <!--    Sub-title for Chapter Two Material section-->
