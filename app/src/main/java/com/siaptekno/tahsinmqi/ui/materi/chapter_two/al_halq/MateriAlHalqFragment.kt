@@ -36,7 +36,11 @@ class MateriAlHalqFragment : Fragment() {
 
         val tabTitles = listOf(
             getString(R.string.alif_sub_title),
-            getString(R.string.ha_tebal_sub_title)
+            getString(R.string.ha_tebal_sub_title),
+            getString(R.string.ain_sub_title),
+            getString(R.string.ha_tipis_sub_title),
+            getString(R.string.ghain_sub_title),
+            getString(R.string.kho_sub_title)
         )
         TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterTwo) { tab, position ->
             tab.text = tabTitles[position]
