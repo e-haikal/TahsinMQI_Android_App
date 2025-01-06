@@ -48,6 +48,9 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterThreeFragment"
             app:destination="@id/navigation_material_chapter_three" />
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterFourFragment"
+            app:destination="@id/navigation_material_chapter_four" />
     </fragment>
 
     <!--    Materi chapter one-->
@@ -149,6 +152,13 @@
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_three.MateriSifatHurufFragment"
         android:label="@string/title_material_chapter_three"
         tools:layout="@layout/fragment_materi_sifat_huruf" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_four"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_four.HukumBacaanFragment"
+        android:label="@string/title_material_chapter_four"
+        tools:layout="@layout/fragment_materi_hukum_bacaan" >
     </fragment>
 
 
