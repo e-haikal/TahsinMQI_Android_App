@@ -45,6 +45,9 @@
         <action
             android:id="@+id/action_materialFragment_to_subMaterialChapterTwoFragment"
             app:destination="@id/navigation_sub_material_chapter_two" />
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterThreeFragment"
+            app:destination="@id/navigation_material_chapter_three" />
     </fragment>
 
     <!--    Materi chapter one-->
@@ -136,7 +139,18 @@
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_khaisyum.MateriAlKhaisyumFragment"
         android:label="@string/title_sub_material_chapter_two"
         tools:layout="@layout/fragment_materi_al_khaisyum" >
+        <action
+            android:id="@+id/action_navigation_sub_material_chapter_two_al_khaisyum_self"
+            app:destination="@id/navigation_sub_material_chapter_two_al_khaisyum" />
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_three"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_three.MateriSifatHurufFragment"
+        android:label="@string/title_material_chapter_three"
+        tools:layout="@layout/fragment_materi_sifat_huruf" >
+    </fragment>
+
 
 
     <fragment

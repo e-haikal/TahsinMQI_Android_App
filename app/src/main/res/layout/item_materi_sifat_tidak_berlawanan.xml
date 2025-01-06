@@ -8,18 +8,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding_medium"
+        android:paddingHorizontal="@dimen/padding_medium"
         android:orientation="vertical">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/materi_sifat_1"/>
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/materi_sifat_2"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,6 +60,10 @@
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
             android:src="@drawable/materi_sifat_8b"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
 
 
 

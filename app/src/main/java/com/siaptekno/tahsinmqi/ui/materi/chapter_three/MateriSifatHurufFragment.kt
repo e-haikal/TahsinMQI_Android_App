@@ -11,49 +11,46 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriAlHalqBinding
-//
-//class MateriSifatHurufFragment : Fragment() {
-//
-//    // Binding for the fragment's layout
-//    private var _binding: FragmentMateriAlHalqBinding? = null
-//    private val binding get() = _binding!!
-//
-//    override fun onCreateView(
-//        inflater: LayoutInflater, container: ViewGroup?,
-//        savedInstanceState: Bundle?
-//    ): View {
-//        // Inflate the layout using View Binding
-//        _binding = FragmentMateriAlHalqBinding.inflate(inflater, container, false)
-//        return binding.root
-//    }
-//
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        // Set up ViewPager2 and TabLayout
-//        val adapter = MateriAlHalqAdapter(requireActivity())
-//        binding.vpMaterialChapterTwo.adapter = adapter
-//
-//        val tabTitles = listOf(
-//            getString(R.string.alif_sub_title),
-//            getString(R.string.ha_tebal_sub_title),
-//            getString(R.string.ain_sub_title),
-//            getString(R.string.ha_tipis_sub_title),
-//            getString(R.string.ghain_sub_title),
-//            getString(R.string.kho_sub_title)
-//        )
-//        TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterTwo) { tab, position ->
-//            tab.text = tabTitles[position]
-//        }.attach()
-//
-//        // Set up navigation for the toolbar
-//        binding.toolbar.setNavigationOnClickListener {
-//            findNavController().navigateUp() // Navigate back to the previous fragment
-//        }
-//    }
-//
-//    override fun onDestroyView() {
-//        super.onDestroyView()
-//        _binding = null
-//    }
-//}
+import com.siaptekno.tahsinmqi.databinding.FragmentMateriSifatHurufBinding
+
+class MateriSifatHurufFragment : Fragment() {
+
+    // Binding for the fragment's layout
+    private var _binding: FragmentMateriSifatHurufBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        // Inflate the layout using View Binding
+        _binding = FragmentMateriSifatHurufBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        // Set up ViewPager2 and TabLayout
+        val adapter = MateriSifatHurufAdapter(requireActivity())
+        binding.vpMaterialChapterThree.adapter = adapter
+
+        val tabTitles = listOf(
+            getString(R.string.tidak_berlawanan_sub_title),
+            getString(R.string.berlawanan_sub_title)
+        )
+        TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterThree) { tab, position ->
+            tab.text = tabTitles[position]
+        }.attach()
+
+        // Set up navigation for the toolbar
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp() // Navigate back to the previous fragment
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+}

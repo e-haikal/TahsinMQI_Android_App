@@ -5,6 +5,7 @@
     <string name="title_tanya_ai">Tanya AiTahsin</string>
     <string name="title_material">Materi</string>
     <string name="title_sub_material_chapter_two">Materi Chapter 2</string>
+    <string name="title_material_chapter_three">Materi Chapter 3</string>
 
     <string name="title_material_name_placeholder">Material Name Placeholderr</string>
     <string name="title_material_desc_placeholder">Material Desc Placeholderr</string>
@@ -52,6 +53,7 @@
         <string name="content_aljauf_hamzah_and_ha_besar">Huruf yang keluar dari tenggorokan bawah adalah Hamzah (ء), Ha besar (ه).</string>
         <string name="content_aljauf_ain_and_ha_kecil">Huruf yang keluar dari tenggorokan tengah adalah ‘Ain (ع) dan Ha kecil (ح).</string>
         <string name="content_aljauf_ghain_and_kha">Huruf yang keluar dari tenggorokan atas adalah ghain (غ), kha (خ).</string>
+
     <string name="title_material_al_halq">Al-Halq - Tenggorokan</string>
     
     <string name="title_material_al_lisan_depan">Al-Lisan - Lidan (depan)</string>
@@ -80,51 +82,49 @@
 
     <string name="title_material_al_khaisyum">Al-Khaisyum - Pangkal Hidung</string>
 
-    <!--    Sub-title for Chapter Two Material section - Al-halq-->
-    <string name="alif_sub_title">ا</string>
-    <string name="ha_tebal_sub_title">ه</string>
-    <string name="ain_sub_title">ع</string>
-    <string name="ha_tipis_sub_title">ح</string>
-    <string name="ghain_sub_title">غ</string>
-    <string name="kho_sub_title">خ</string>
+        <!--    Sub-title for Chapter Two Material section - Al-halq-->
+        <string name="alif_sub_title">ا</string>
+        <string name="ha_tebal_sub_title">ه</string>
+        <string name="ain_sub_title">ع</string>
+        <string name="ha_tipis_sub_title">ح</string>
+        <string name="ghain_sub_title">غ</string>
+        <string name="kho_sub_title">خ</string>
 
-    <!--    Sub-title for Chapter Two Material section - Al-lisan depan-->
-    <string name="ta_sub_title">ت</string>
-    <string name="dal_sub_title">د</string>
-    <string name="tho_sub_title">ط</string>
-    <string name="tsa_sub_title">ث</string>
-    <string name="dzal_sub_title">ذ</string>
-    <string name="dzo_sub_title">ظ</string>
-    <string name="sin_sub_title">س</string>
-    <string name="zai_sub_title">ز</string>
-    <string name="shod_sub_title">ص</string>
+        <!--    Sub-title for Chapter Two Material section - Al-lisan depan-->
+        <string name="ta_sub_title">ت</string>
+        <string name="dal_sub_title">د</string>
+        <string name="tho_sub_title">ط</string>
+        <string name="tsa_sub_title">ث</string>
+        <string name="dzal_sub_title">ذ</string>
+        <string name="dzo_sub_title">ظ</string>
+        <string name="sin_sub_title">س</string>
+        <string name="zai_sub_title">ز</string>
+        <string name="shod_sub_title">ص</string>
 
-    <!--    Sub-title for Chapter Two Material section - Al-lisan tengah-->
-    <string name="ro_sub_title">ر</string>
-    <string name="lam_sub_title">ل</string>
-    <string name="nun_sub_title">ن</string>
-    <string name="jim_sub_title">ج</string>
-    <string name="syin_sub_title">ش</string>
-    <string name="ya_sub_title">ي</string>
-    <string name="dhod_sub_title">ض</string>
+        <!--    Sub-title for Chapter Two Material section - Al-lisan tengah-->
+        <string name="ro_sub_title">ر</string>
+        <string name="lam_sub_title">ل</string>
+        <string name="nun_sub_title">ن</string>
+        <string name="jim_sub_title">ج</string>
+        <string name="syin_sub_title">ش</string>
+        <string name="ya_sub_title">ي</string>
+        <string name="dhod_sub_title">ض</string>
 
-    <!--    Sub-title for Chapter Two Material section - Al-lisan belakang-->
-    <string name="kaf_sub_title">ك</string>
-    <string name="qof_sub_title">ق</string>
+        <!--    Sub-title for Chapter Two Material section - Al-lisan belakang-->
+        <string name="kaf_sub_title">ك</string>
+        <string name="qof_sub_title">ق</string>
 
-    <!--    Sub-title for Chapter Two Material section - Asy-Syafatan-->
-    <string name="fa_sub_title">ف</string>
-    <string name="ba_sub_title">ب</string>
-    <string name="mim_sub_title">م</string>
-    <string name="waw_sub_title">و</string>
+        <!--    Sub-title for Chapter Two Material section - Asy-Syafatan-->
+        <string name="fa_sub_title">ف</string>
+        <string name="ba_sub_title">ب</string>
+        <string name="mim_sub_title">م</string>
+        <string name="waw_sub_title">و</string>
 
     <!--    Title for Chapter 3 Material section-->
     <string name="title_material_sifat_huruf">Sifat Huruf</string>
-
-
-
-
-
+        <!--    Sub-title for Chapter 3 Material section-->
+        <string name="berlawanan_sub_title">Berlawanan</string>
+        <string name="tidak_berlawanan_sub_title">Tidak Berlawanan</string>
 
 
 

@@ -53,6 +53,7 @@ class MaterialFragment : Fragment() {
             when (material.id) {
                 1 -> findNavController().navigate(R.id.action_materialFragment_to_subMaterialChapterOneFragment)
                 2 -> findNavController().navigate(R.id.action_materialFragment_to_subMaterialChapterTwoFragment)
+                3 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterThreeFragment)
                 // Add more cases for additional materials
             }
         }
