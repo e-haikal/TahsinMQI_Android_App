@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.siaptekno.tahsinmqi.R
 
-class LamFragment : Fragment() {
+class YaFragment : Fragment() {
     private var mediaPlayer: MediaPlayer? = null
     private var mediaPlayer2: MediaPlayer? = null
 
@@ -17,14 +17,14 @@ class LamFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.item_materi_lisan_tengah_lam, container, false)
+        val view = inflater.inflate(R.layout.item_materi_lisan_tengah_ya, container, false)
 
         val audioButton = view.findViewById<Button>(R.id.btn_audio)
         val contohButton = view.findViewById<Button>(R.id.btn_contoh)
         val stopButton = view.findViewById<Button>(R.id.btn_stop)
 
-        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.la_audio)
-        mediaPlayer2 = MediaPlayer.create(requireContext(), R.raw.la_syair_audio)
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.ya_audio)
+        mediaPlayer2 = MediaPlayer.create(requireContext(), R.raw.ya_syair_audio)
 
         // Play the first audio
         audioButton.setOnClickListener {
