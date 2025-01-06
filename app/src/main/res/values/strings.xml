@@ -61,7 +61,12 @@
 
     <string name="title_material_al_lisan_tengah">Al-Lisan - Lisan (tengah)</string>
         <string name="content_allisan_ro">Makhraj ra’ adalah dari ujung lidah berikut gigi seri yang sejajar, hampir mendekati makhraj nun. Ra’ tebal disertai suara dari dalam kerongkongan pada lidah bagian tengah dan penyempitan pada tenggorokan. Berbeda dengan ra’ tipis</string>
-        <string name="content_allisan_"></string>
+        <string name="content_allisan_lam">Makhraj lam adalah dari dua tepi lidah paling luar hingga ujung lisan. Lam tebal ketika dilafalkan disertai suara dari dalam kerongkongan dibagian tengah lidah dan penyempitan pada tenggorokan. Berbeda dengan lam tipis</string>
+        <string name="content_allisan_nun">Makhraj nun adalah dari ujung lidah dan gusi yang sejajar dengannya, sedikit dibawah makhraj lam, disertai dengungan(ghunnah) dari rongga hidung. Ulama menyebut nun dibagian lidah sebagai an-nishful mukammal (separuh yang dilengkapi), dan bagian nun pada rongga hidung sebagai annishful mukammil (separuh yang melengkapi).</string>
+        <string name="content_allisan_jim">Makhraj Jim adalah bagian tengah lidah dan bagian tengah langit-langit mulut paling atas.</string>
+        <string name="content_allisan_syin">Makhraj Syin adalah bagian tengah lidah dan bagian langit-langit mulut paling atas.</string>
+        <string name="content_allisan_ya">Makhraj ya’ yang bukan mad adalah dari bagian tengah lidah dan bagian tengah langit-langit mulut paling atas. Tekanan suara ya’ yang bukan mad lebih banyak daripada saat dibaca Panjang.</string>
+        <string name="content_allisan_dhod">Makhraj dhad adalah tepi lidah serta sekitar gigi geraham atas.</string>
 
     <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
 
