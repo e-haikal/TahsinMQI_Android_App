@@ -3,6 +3,7 @@ package com.siaptekno.tahsinmqi.ui.materi.chapter_three
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.siaptekno.tahsinmqi.ui.materi.chapter_three.fragment.BerlawananFragment
 import com.siaptekno.tahsinmqi.ui.materi.chapter_three.fragment.TidakBerlawananFragment
 import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_halq.fragment.AinFragment
 import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_halq.fragment.GhainFragment
@@ -14,7 +15,7 @@ import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_halq.fragment.KhaFragmen
 
 class MateriSifatHurufAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
     private val fragments = listOf(
-//        BerlawananFragment(),
+        BerlawananFragment(),
         TidakBerlawananFragment()
         // Add more fragments as needed
     )

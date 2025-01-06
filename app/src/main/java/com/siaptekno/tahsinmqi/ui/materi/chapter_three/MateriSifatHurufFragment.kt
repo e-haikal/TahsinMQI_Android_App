@@ -36,8 +36,8 @@ class MateriSifatHurufFragment : Fragment() {
         binding.vpMaterialChapterThree.adapter = adapter
 
         val tabTitles = listOf(
-            getString(R.string.tidak_berlawanan_sub_title),
-            getString(R.string.berlawanan_sub_title)
+            getString(R.string.berlawanan_sub_title),
+            getString(R.string.tidak_berlawanan_sub_title)
         )
         TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterThree) { tab, position ->
             tab.text = tabTitles[position]

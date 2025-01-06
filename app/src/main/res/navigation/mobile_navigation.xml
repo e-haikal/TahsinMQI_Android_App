@@ -92,7 +92,7 @@
     <!--    Materi chapter two - Al-jauf-->
     <fragment
         android:id="@+id/navigation_sub_material_chapter_two_al_jauf"
-        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_jauf.MateriAlKhaisyumFragment"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_jauf.MateriAlJaufFragment"
         android:label="@string/title_sub_material_chapter_two"
         tools:layout="@layout/fragment_materi_al_jauf" >
     </fragment>
