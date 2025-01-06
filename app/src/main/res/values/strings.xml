@@ -110,6 +110,13 @@
     <string name="kaf_sub_title">ك</string>
     <string name="qof_sub_title">ق</string>
 
+    <!--    Sub-title for Chapter Two Material section - Asy-Syafatan-->
+    <string name="fa_sub_title">ف</string>
+    <string name="ba_sub_title">ب</string>
+    <string name="mim_sub_title">م</string>
+    <string name="waw_sub_title">و</string>
+
+
 
 
 

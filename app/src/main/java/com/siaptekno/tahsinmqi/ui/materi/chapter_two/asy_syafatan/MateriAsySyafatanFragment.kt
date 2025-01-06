@@ -13,11 +13,12 @@ import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriAlHalqBinding
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriAlLisanDepanBinding
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriAlLisanTengahBinding
+import com.siaptekno.tahsinmqi.databinding.FragmentMateriAsySyafatanBinding
 
 class MateriAsySyafatanFragment : Fragment() {
 
     // Binding for the fragment's layout
-    private var _binding: FragmentMateriAlLisanTengahBinding? = null
+    private var _binding: FragmentMateriAsySyafatanBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +26,7 @@ class MateriAsySyafatanFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout using View Binding
-        _binding = FragmentMateriAlLisanTengahBinding.inflate(inflater, container, false)
+        _binding = FragmentMateriAsySyafatanBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -33,18 +34,14 @@ class MateriAsySyafatanFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Set up ViewPager2 and TabLayout
-        val adapter = MateriAlLisanTengahAdapter(requireActivity())
+        val adapter = MateriAsySyafatanAdapter(requireActivity())
         binding.vpMaterialChapterTwo.adapter = adapter
 
         val tabTitles = listOf(
-            getString(R.string.ro_sub_title),
-            getString(R.string.lam_sub_title),
-            getString(R.string.nun_sub_title),
-            getString(R.string.jim_sub_title),
-            getString(R.string.syin_sub_title),
-            getString(R.string.ya_sub_title),
-            getString(R.string.dhod_sub_title)
-
+            getString(R.string.fa_sub_title),
+            getString(R.string.ba_sub_title),
+            getString(R.string.mim_sub_title),
+            getString(R.string.waw_sub_title)
         )
         TabLayoutMediator(binding.tabLayout, binding.vpMaterialChapterTwo) { tab, position ->
             tab.text = tabTitles[position]

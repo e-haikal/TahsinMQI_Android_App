@@ -19,6 +19,10 @@ import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_tengah.fragment.Nu
 import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_tengah.fragment.RoFragment
 import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_tengah.fragment.SyinFragment
 import com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_tengah.fragment.YaFragment
+import com.siaptekno.tahsinmqi.ui.materi.chapter_two.asy_syafatan.fragment.BaFragment
+import com.siaptekno.tahsinmqi.ui.materi.chapter_two.asy_syafatan.fragment.FaFragment
+import com.siaptekno.tahsinmqi.ui.materi.chapter_two.asy_syafatan.fragment.MimFragment
+import com.siaptekno.tahsinmqi.ui.materi.chapter_two.asy_syafatan.fragment.WawFragment
 
 class MateriAsySyafatanAdapter(activity: FragmentActivity) : FragmentStateAdapter(activity) {
     private val fragments = listOf(
