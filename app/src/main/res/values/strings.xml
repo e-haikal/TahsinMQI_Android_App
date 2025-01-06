@@ -59,7 +59,10 @@
         <string name="content_allisan_za_zal_tsa_">Posisi makhraj Tsa’, Żal, Ẓa’ ( ظ،ذ،ث ) adalah ujung lidah dengan ujung gigi seri bagian atas.</string>
         <string name="content_allisan_sin_zai_shad">Posisi makhraj Sin, Za’, Shad ( ص،ز,س ) adalah ujung lidah bersama lapisan bagian dalam gigi-gigi seri bagian bawah. Huruf keluar dari atasnya melalui gigi-gigi seri bagian atas dan bawah</string>
 
-    <string name="title_material_al_lisan_tengah">Al-Lisan - Lidan (tengah)</string>
+    <string name="title_material_al_lisan_tengah">Al-Lisan - Lisan (tengah)</string>
+        <string name="content_allisan_ro">Makhraj ra’ adalah dari ujung lidah berikut gigi seri yang sejajar, hampir mendekati makhraj nun. Ra’ tebal disertai suara dari dalam kerongkongan pada lidah bagian tengah dan penyempitan pada tenggorokan. Berbeda dengan ra’ tipis</string>
+        <string name="content_allisan_"></string>
+
     <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
 
     <!--    Sub-title for Chapter Two Material section - Al-halq-->
@@ -80,6 +83,18 @@
     <string name="sin_sub_title">س</string>
     <string name="zai_sub_title">ز</string>
     <string name="shod_sub_title">ص</string>
+
+    <!--    Sub-title for Chapter Two Material section - Al-lisan tengah-->
+    <string name="ro_sub_title">ر</string>
+    <string name="lam_sub_title">ل</string>
+    <string name="nun_sub_title">ن</string>
+    <string name="jim_sub_title">ج</string>
+    <string name="syin_sub_title">ش</string>
+    <string name="ya_sub_title">ي</string>
+    <string name="dhod_sub_title">ض</string>
+
+
+
 
 
 

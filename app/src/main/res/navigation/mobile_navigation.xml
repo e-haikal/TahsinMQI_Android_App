@@ -71,6 +71,9 @@
         <action
             android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_depan"
             app:destination="@id/navigation_sub_material_chapter_two_al_lisan_depan" />
+        <action
+            android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_tengah"
+            app:destination="@id/navigation_sub_material_chapter_two_al_lisan_tengah" />
     </fragment>
 
 
@@ -90,7 +93,6 @@
         tools:layout="@layout/fragment_materi_al_halq" >
     </fragment>
 
-
     <!--    Materi chapter two - Al-lisan-depan-->
     <fragment
         android:id="@+id/navigation_sub_material_chapter_two_al_lisan_depan"
@@ -99,6 +101,13 @@
         tools:layout="@layout/fragment_materi_al_lisan_depan" >
     </fragment>
 
+    <!--    Materi chapter two - Al-lisan-tengah-->
+    <fragment
+        android:id="@+id/navigation_sub_material_chapter_two_al_lisan_tengah"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_tengah.MateriAlLisanTengahFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_materi_al_lisan_tengah" >
+    </fragment>
 
 
     <fragment
