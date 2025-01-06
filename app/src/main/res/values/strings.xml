@@ -68,9 +68,15 @@
         <string name="content_allisan_ya">Makhraj ya’ yang bukan mad adalah dari bagian tengah lidah dan bagian tengah langit-langit mulut paling atas. Tekanan suara ya’ yang bukan mad lebih banyak daripada saat dibaca Panjang.</string>
         <string name="content_allisan_dhod">Makhraj dhad adalah tepi lidah serta sekitar gigi geraham atas.</string>
 
-    <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
+    <string name="title_material_al_lisan_belakang">Al-Lisan - Lidah (belakang)</string>
         <string name="content_allisan_kaf">Makhraj Kaf adalah bagian lidah paling dalam, langit-langit mulut yang berdaging dan bertulang.</string>
         <string name="content_allisan_qof">Makhraj Qaf adalah bagian lidah paling dalam dan langit-langit mulut yang berdaging.</string>
+
+    <string name="title_material_asy_syafatan">Asy-Syafatan - Kedua Bibir</string>
+        <string name="content_asysyafatan_fa">Makhraj fa’ adalah dari bagian dalam bibir bawah Bersama ujung gigi seri bagian atas.</string>
+        <string name="content_asysyafatan_ba">Makhraj ba’ adalah dengan merapatkan kedua bibir.</string>
+        <string name="content_asysyafatan_mim">Makhraj mim adalah dengan merapatkan kedua bibir disertai dengungan dari rongga hidung. Ulama menyebut bagian mim pada bibir sebagai an-nishful Mukammal (separuh yang dilengkapi), dan bagian mim pada rongga hidung bagian belakang sebagai an-nishful Mukammil (separuh yang melengkapi).</string>
+        <string name="content_asysyafatan_waw">Makhraj wawu bukan mad adalah dengan menggabungkan dua bibir ke depan dengan mengangkat lidah bagian paling dalam. Tekanan suara wawu yang bukan mad lebih banyak daripada saat dibaca Panjang.</string>
 
     <!--    Sub-title for Chapter Two Material section - Al-halq-->
     <string name="alif_sub_title">ا</string>
