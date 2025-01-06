@@ -50,7 +50,7 @@ class SubMaterialChapterTwoFragment : Fragment() {
                 2 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_halq)
                 3 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_depan)
                 4 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_tengah)
-
+                5 -> findNavController().navigate(R.id.action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_belakang)
 
             }
 

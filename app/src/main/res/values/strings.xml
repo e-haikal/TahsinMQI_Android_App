@@ -69,6 +69,8 @@
         <string name="content_allisan_dhod">Makhraj dhad adalah tepi lidah serta sekitar gigi geraham atas.</string>
 
     <string name="title_material_al_lisan_belakang">Al-Lisan - Lidan (belakang)</string>
+        <string name="content_allisan_kaf">Makhraj Kaf adalah bagian lidah paling dalam, langit-langit mulut yang berdaging dan bertulang.</string>
+        <string name="content_allisan_qof">Makhraj Qaf adalah bagian lidah paling dalam dan langit-langit mulut yang berdaging.</string>
 
     <!--    Sub-title for Chapter Two Material section - Al-halq-->
     <string name="alif_sub_title">ا</string>
@@ -98,6 +100,9 @@
     <string name="ya_sub_title">ي</string>
     <string name="dhod_sub_title">ض</string>
 
+    <!--    Sub-title for Chapter Two Material section - Al-lisan belakang-->
+    <string name="kaf_sub_title">ك</string>
+    <string name="qof_sub_title">ق</string>
 
 
 
