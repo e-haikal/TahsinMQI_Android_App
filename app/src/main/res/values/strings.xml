@@ -78,6 +78,8 @@
         <string name="content_asysyafatan_mim">Makhraj mim adalah dengan merapatkan kedua bibir disertai dengungan dari rongga hidung. Ulama menyebut bagian mim pada bibir sebagai an-nishful Mukammal (separuh yang dilengkapi), dan bagian mim pada rongga hidung bagian belakang sebagai an-nishful Mukammil (separuh yang melengkapi).</string>
         <string name="content_asysyafatan_waw">Makhraj wawu bukan mad adalah dengan menggabungkan dua bibir ke depan dengan mengangkat lidah bagian paling dalam. Tekanan suara wawu yang bukan mad lebih banyak daripada saat dibaca Panjang.</string>
 
+    <string name="title_material_al_khaisyum">Al-Khaisyum - Pangkal Hidung</string>
+
     <!--    Sub-title for Chapter Two Material section - Al-halq-->
     <string name="alif_sub_title">ا</string>
     <string name="ha_tebal_sub_title">ه</string>
