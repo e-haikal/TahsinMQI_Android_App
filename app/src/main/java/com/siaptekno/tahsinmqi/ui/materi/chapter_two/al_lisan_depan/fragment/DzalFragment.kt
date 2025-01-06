@@ -9,7 +9,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.siaptekno.tahsinmqi.R
 
-class TaFragment : Fragment() {
+class DzalFragment : Fragment() {
     private var mediaPlayer: MediaPlayer? = null
     private var mediaPlayer2: MediaPlayer? = null
 
@@ -17,14 +17,14 @@ class TaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.item_materi_lisan_depan_ta, container, false)
+        val view = inflater.inflate(R.layout.item_materi_lisan_depan_dzal, container, false)
 
         val audioButton = view.findViewById<Button>(R.id.btn_audio)
         val contohButton = view.findViewById<Button>(R.id.btn_contoh)
         val stopButton = view.findViewById<Button>(R.id.btn_stop)
 
-        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.ta_audio)
-        mediaPlayer2 = MediaPlayer.create(requireContext(), R.raw.ta_syair_audio)
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.dza_audio)
+        mediaPlayer2 = MediaPlayer.create(requireContext(), R.raw.dza_syair_audio)
 
 
         // Play the first audio

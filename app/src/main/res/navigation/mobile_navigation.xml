@@ -68,6 +68,9 @@
         <action
             android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_halq"
             app:destination="@id/navigation_sub_material_chapter_two_al_halq" />
+        <action
+            android:id="@+id/action_subMaterialChapterTwoFragment_to_sub_material_chapter_two_al_lisan_depan"
+            app:destination="@id/navigation_sub_material_chapter_two_al_lisan_depan" />
     </fragment>
 
 
@@ -86,6 +89,16 @@
         android:label="@string/title_sub_material_chapter_two"
         tools:layout="@layout/fragment_materi_al_halq" >
     </fragment>
+
+
+    <!--    Materi chapter two - Al-lisan-depan-->
+    <fragment
+        android:id="@+id/navigation_sub_material_chapter_two_al_lisan_depan"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_two.al_lisan_depan.MateriAlLisanDepanFragment"
+        android:label="@string/title_sub_material_chapter_two"
+        tools:layout="@layout/fragment_materi_al_lisan_depan" >
+    </fragment>
+
 
 
     <fragment
