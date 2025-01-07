@@ -51,15 +51,15 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterFourFragment"
             app:destination="@id/navigation_material_chapter_four" />
-
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterFiveFragment"
             app:destination="@id/navigation_material_chapter_five" />
-
-
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterSixFragment"
             app:destination="@id/navigation_material_chapter_six" />
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterSevenFragment"
+            app:destination="@id/navigation_material_chapter_seven" />
 
 
     </fragment>
@@ -182,8 +182,15 @@
     <fragment
         android:id="@+id/navigation_material_chapter_six"
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_six.LamTarifFragment"
-        android:label="@string/title_material_chapter_five"
+        android:label="@string/title_material_chapter_six"
         tools:layout="@layout/fragment_materi_lam_tarif" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_seven"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_seven.MateriHukumMadFragment"
+        android:label="@string/title_material_chapter_seven"
+        tools:layout="@layout/fragment_materi_hukum_mad" >
     </fragment>
 
 
