@@ -6,14 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.R
-import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
-import com.siaptekno.tahsinmqi.databinding.FragmentMateriBinding
-import com.siaptekno.tahsinmqi.databinding.FragmentSubMateriChapter1Binding
 import com.siaptekno.tahsinmqi.databinding.ItemMateriNunMatiBinding
-import com.siaptekno.tahsinmqi.databinding.ItemMateriSifatBerlawananBinding
-import com.siaptekno.tahsinmqi.databinding.ItemMateriSifatTidakBerlawananBinding
 
 class NunMatiFragment : Fragment() {
 
@@ -34,7 +28,6 @@ class NunMatiFragment : Fragment() {
     ): View? {
         // Inflate the layout using the binding class
         _binding = ItemMateriNunMatiBinding.inflate(inflater, container, false)
-        return binding.root
 
         val playButton1 = binding.ivBtnPlay1
         val playButton2 = binding.ivBtnPlay2
@@ -42,7 +35,44 @@ class NunMatiFragment : Fragment() {
         val playButton4 = binding.ivBtnPlay4
         val playButton5 = binding.ivBtnPlay5
 
-        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.nun_mati_audio)
+        mediaPlayer = MediaPlayer.create(requireContext(), R.raw.idzhar)
+        mediaPlayer2 = MediaPlayer.create(requireContext(), R.raw.bighunnah)
+        mediaPlayer3 = MediaPlayer.create(requireContext(), R.raw.bilaghunnah)
+        mediaPlayer4 = MediaPlayer.create(requireContext(), R.raw.iqlab)
+        mediaPlayer5 = MediaPlayer.create(requireContext(), R.raw.ikhfa)
+
+        playButton1.setOnClickListener {
+            stopAllAudio()
+            if (mediaPlayer?.isPlaying == false) {
+                mediaPlayer?.start()
+            }
+        }
+        playButton2.setOnClickListener {
+            stopAllAudio()
+            if (mediaPlayer2?.isPlaying == false) {
+                mediaPlayer2?.start()
+            }
+        }
+        playButton3.setOnClickListener {
+            stopAllAudio()
+            if (mediaPlayer3?.isPlaying == false) {
+                mediaPlayer3?.start()
+            }
+        }
+        playButton4.setOnClickListener {
+            stopAllAudio()
+            if (mediaPlayer4?.isPlaying == false) {
+                mediaPlayer4?.start()
+            }
+        }
+        playButton5.setOnClickListener {
+            stopAllAudio()
+            if (mediaPlayer5?.isPlaying == false) {
+                mediaPlayer5?.start()
+            }
+        }
+
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,9 +81,59 @@ class NunMatiFragment : Fragment() {
 //            findNavController().navigateUp()
 //        }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
 
+    }
+
+    // Stop all audio and reset the players
+    private fun stopAllAudio() {
+        mediaPlayer?.let {
+            if (it.isPlaying) {
+                it.stop()
+                it.prepare() // Reset to allow replaying
+            }
+        }
+        mediaPlayer2?.let {
+            if (it.isPlaying) {
+                it.stop()
+                it.prepare() // Reset to allow replaying
+            }
+        }
+        mediaPlayer3?.let {
+            if (it.isPlaying) {
+                it.stop()
+                it.prepare() // Reset to allow replaying
+            }
+        }
+        mediaPlayer4?.let {
+            if (it.isPlaying) {
+                it.stop()
+                it.prepare() // Reset to allow replaying
+            }
+        }
+        mediaPlayer5?.let {
+            if (it.isPlaying) {
+                it.stop()
+                it.prepare() // Reset to allow replaying
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        // Release both MediaPlayers
+        mediaPlayer?.release()
+        mediaPlayer = null
+        mediaPlayer2?.release()
+        mediaPlayer2 = null
+        mediaPlayer3?.release()
+        mediaPlayer3 = null
+        mediaPlayer4?.release()
+        mediaPlayer4 = null
+        mediaPlayer5?.release()
+        mediaPlayer5 = null
     }
 }
