@@ -5,39 +5,133 @@
     android:background="@color/muted_green"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingHorizontal="@dimen/padding_medium"
         android:orientation="vertical">
         <ImageView
+            android:id="@+id/iv_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:src="@drawable/materi_nun_1"/>
         <ImageView
+            android:id="@+id/iv_btn_play_1"
+            android:src="@drawable/tombol_putar"
+            app:layout_constraintEnd_toEndOf="@id/iv_1"
+            app:layout_constraintBottom_toBottomOf="@id/iv_1"
+            app:layout_constraintStart_toStartOf="@id/iv_1"
+            app:layout_constraintHorizontal_bias="1"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_1"
             android:src="@drawable/materi_nun_2"/>
         <ImageView
+            android:id="@+id/iv_btn_play_2"
+            android:src="@drawable/tombol_putar"
+            app:layout_constraintEnd_toEndOf="@id/iv_2"
+            app:layout_constraintBottom_toBottomOf="@id/iv_2"
+            app:layout_constraintStart_toStartOf="@id/iv_2"
+            app:layout_constraintHorizontal_bias="1"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_2"
             android:src="@drawable/materi_nun_3"/>
         <ImageView
+            android:id="@+id/iv_btn_play_3"
+            android:src="@drawable/tombol_putar"
+            app:layout_constraintEnd_toEndOf="@id/iv_3"
+            app:layout_constraintBottom_toBottomOf="@id/iv_3"
+            app:layout_constraintStart_toStartOf="@id/iv_3"
+            app:layout_constraintHorizontal_bias="1"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_3"
             android:src="@drawable/materi_nun_4"/>
         <ImageView
+            android:id="@+id/iv_btn_play_4"
+            android:src="@drawable/tombol_putar"
+            app:layout_constraintEnd_toEndOf="@id/iv_4"
+            app:layout_constraintBottom_toBottomOf="@id/iv_4"
+            app:layout_constraintStart_toStartOf="@id/iv_4"
+            app:layout_constraintHorizontal_bias="1"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:id="@+id/iv_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_4"
             android:src="@drawable/materi_nun_5"/>
         <View
+            android:id="@+id/view_bg_button_5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_5"
+            android:background="@color/light_yellow"/>
+        <ImageView
+            android:id="@+id/iv_btn_play_5"
+            android:src="@drawable/tombol_putar"
+            android:background="@color/light_yellow"
+            app:layout_constraintTop_toTopOf="@id/view_bg_button_5"
+            app:layout_constraintBottom_toBottomOf="@id/view_bg_button_5"
+            app:layout_constraintEnd_toEndOf="@id/view_bg_button_5"
+            app:layout_constraintStart_toStartOf="@id/view_bg_button_5"
+            app:layout_constraintHorizontal_bias="1"
+            android:adjustViewBounds="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+        <View
+            android:id="@+id/view_separator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_bg_button_5"
             android:layout_width="match_parent"
             android:layout_height="120dp" />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

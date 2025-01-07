@@ -16,5 +16,6 @@
 
 <!--    only for material-->
     <color name="peachy">#FACDA3</color> <!-- bg for btn container aiTahsin-->
-    <color name="light_yellow">#FFFAC3</color> <!-- bg text for material -->
+    <color name="light_yellow">#FBEDD3</color> <!-- bg text for material -->
+
 </resources>
