@@ -63,6 +63,9 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterEightFragment"
             app:destination="@id/navigation_material_chapter_eight" />
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterNineFragment"
+            app:destination="@id/navigation_material_chapter_nine" />
 
     </fragment>
 
@@ -201,6 +204,14 @@
         android:label="@string/title_material_chapter_eight"
         tools:layout="@layout/fragment_materi_tafkhim_tarqiq" >
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_nine"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_nine.TandaWaqafFragment"
+        android:label="@string/title_material_chapter_nine"
+        tools:layout="@layout/fragment_materi_tanda_waqaf" >
+    </fragment>
+
 
 
 

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/muted_green"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- MaterialToolbar placed outside the scrollable content -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/greenish"
+        app:navigationIcon="@drawable/ic_back_24"
+        app:title="@string/title_material_tanda_waqaf"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints" />
+
+    <!-- ScrollView wrapping only the content that should be scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_1"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_2"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_3"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_4"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_5"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:layout_marginHorizontal="@dimen/margin_medium"
+                android:src="@drawable/materi_waqaf_6"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
