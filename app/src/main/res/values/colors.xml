@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color> <!-- Text or high contrast element -->
     <color name="white">#FFFFFFFF</color> <!-- Background or text color -->
-    <color name="dynamic_white">#FFFFFFFF</color> <!-- Background or text color -->
+    <color name="dynamic_white">#FFF2F2F2</color> <!-- Background or text color -->
     <color name="smoke_white">#F7F7F7</color> <!-- Background or text color -->
 
     <color name="greenish">#13A795</color> <!-- Primary color -->
