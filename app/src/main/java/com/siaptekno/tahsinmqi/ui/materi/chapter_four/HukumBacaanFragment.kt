@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.siaptekno.tahsinmqi.R
@@ -48,10 +49,23 @@ class HukumBacaanFragment : Fragment() {
         binding.toolbar.setNavigationOnClickListener {
             findNavController().navigateUp() // Navigate back to the previous fragment
         }
+        // Hide the BottomNavigationView when the user is in this fragment.
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        bottomNavigationView.visibility = View.GONE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        val navController = findNavController()
+        val destinationId = navController.currentDestination?.id
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+
+        // Show BottomNavigationView only if navigating to the HomeFragment.
+        if (destinationId == R.id.navigation_home) {
+            bottomNavigationView.visibility = View.VISIBLE
+        } else {
+            bottomNavigationView.visibility = View.GONE
+        }
         _binding = null
     }
 }
