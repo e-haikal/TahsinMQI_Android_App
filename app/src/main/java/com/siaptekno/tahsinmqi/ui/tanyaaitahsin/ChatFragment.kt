@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.ai.client.generativeai.GenerativeModel
+import com.siaptekno.tahsinmqi.BuildConfig
 import com.siaptekno.tahsinmqi.databinding.FragmentChatBinding
 
 class ChatFragment : Fragment() {
@@ -34,7 +35,7 @@ class ChatFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val geminiAi = GenerativeModel(
             modelName = "gemini-pro",
-            apiKey = Constants.API_KEY
+            apiKey = BuildConfig.GEMINI_API_KEY
         )
 
         viewModel = ViewModelProvider(

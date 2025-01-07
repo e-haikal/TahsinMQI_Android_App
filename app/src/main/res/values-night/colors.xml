@@ -4,4 +4,5 @@
     <color name="dynamic_white">#121212</color> <!-- Background or text color -->
     <color name="black">#FFFFFF</color>
     <color name="light_gray">#2C2C2C</color>
+    <color name="dynamic_cool_gray">#2C2C2C</color>
 </resources>

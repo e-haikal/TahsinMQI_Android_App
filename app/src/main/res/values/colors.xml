@@ -13,6 +13,7 @@
     <color name="light_gray">#F2F2F2</color> <!-- Light gray background / used as Bg button area-->
 
     <color name="cool_gray">#E8EAF0</color> <!-- bg for chat aiTahsin-->
+    <color name="dynamic_cool_gray">#E8EAF0</color> <!-- bg for chat aiTahsin-->
     <color name="muted_green">#6F7D8D</color> <!-- text chat aiTahsin -->
 
 <!--    only for material-->
