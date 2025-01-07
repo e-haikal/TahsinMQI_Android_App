@@ -66,6 +66,9 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterNineFragment"
             app:destination="@id/navigation_material_chapter_nine" />
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterTenFragment"
+            app:destination="@id/navigation_material_chapter_ten" />
 
     </fragment>
 
@@ -211,6 +214,14 @@
         android:label="@string/title_material_chapter_nine"
         tools:layout="@layout/fragment_materi_tanda_waqaf" >
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_ten"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_ten.AyatGharibahFragment"
+        android:label="@string/title_material_chapter_ten"
+        tools:layout="@layout/fragment_materi_ayat_gharibah" >
+    </fragment>
+
 
 
 

@@ -12,6 +12,7 @@
     <string name="title_material_chapter_seven">Materi Chapter 7</string>
     <string name="title_material_chapter_eight">Materi Chapter 8</string>
     <string name="title_material_chapter_nine">Materi Chapter 9</string>
+    <string name="title_material_chapter_ten">Materi Chapter 10</string>
 
     <string name="title_material_name_placeholder">Material Name Placeholderr</string>
     <string name="title_material_desc_placeholder">Material Desc Placeholderr</string>
@@ -150,6 +151,8 @@
         <string name="tarqiq_sub_title">Tarqiq (Tipis)</string>
 
     <string name="title_material_tanda_waqaf">Tanda Waqaf</string>
+
+    <string name="title_material_ayat_gharibah">Ayat Gharibah</string>
 
 
 </resources>
