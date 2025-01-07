@@ -8,9 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.R
-import com.siaptekno.tahsinmqi.databinding.FragmentSubMateriChapter1Binding
 import com.siaptekno.tahsinmqi.databinding.ItemMateriHukumIdghamBinding
-import com.siaptekno.tahsinmqi.databinding.ItemMateriMimMatiBinding
 
 class HukumIdghamFragment : Fragment() {
 

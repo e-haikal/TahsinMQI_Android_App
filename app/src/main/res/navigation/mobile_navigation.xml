@@ -55,6 +55,13 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterFiveFragment"
             app:destination="@id/navigation_material_chapter_five" />
+
+
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterSixFragment"
+            app:destination="@id/navigation_material_chapter_six" />
+
+
     </fragment>
 
     <!--    Materi chapter one-->
@@ -170,6 +177,13 @@
         android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_five.HukumIdghamFragment"
         android:label="@string/title_material_chapter_five"
         tools:layout="@layout/item_materi_hukum_idgham" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_six"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_six.LamTarifFragment"
+        android:label="@string/title_material_chapter_five"
+        tools:layout="@layout/fragment_materi_lam_tarif" >
     </fragment>
 
 
