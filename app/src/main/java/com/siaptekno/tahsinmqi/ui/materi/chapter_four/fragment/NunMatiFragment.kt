@@ -135,5 +135,7 @@ class NunMatiFragment : Fragment() {
         mediaPlayer4 = null
         mediaPlayer5?.release()
         mediaPlayer5 = null
+
+        _binding = null
     }
 }
