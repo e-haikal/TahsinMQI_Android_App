@@ -9,7 +9,41 @@
         android:id="@+id/navigation_home"
         android:name="com.siaptekno.tahsinmqi.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/navigation_home_to_subMaterialChapterOneFragment"
+            app:destination="@id/navigation_sub_material_chapter_one" />
+        <action
+            android:id="@+id/navigation_home_to_subMaterialChapterTwoFragment"
+            app:destination="@id/navigation_sub_material_chapter_two" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterThreeFragment"
+            app:destination="@id/navigation_material_chapter_three" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterFourFragment"
+            app:destination="@id/navigation_material_chapter_four" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterFiveFragment"
+            app:destination="@id/navigation_material_chapter_five" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterSixFragment"
+            app:destination="@id/navigation_material_chapter_six" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterSevenFragment"
+            app:destination="@id/navigation_material_chapter_seven" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterEightFragment"
+            app:destination="@id/navigation_material_chapter_eight" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterNineFragment"
+            app:destination="@id/navigation_material_chapter_nine" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterTenFragment"
+            app:destination="@id/navigation_material_chapter_ten" />
+        <action
+            android:id="@+id/navigation_home_to_MaterialChapterElevenFragment"
+            app:destination="@id/navigation_material_chapter_eleven" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_alquran"
