@@ -60,6 +60,8 @@ class MaterialFragment : Fragment() {
                 8 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterEightFragment)
                 9 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterNineFragment)
                 10 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterTenFragment)
+                11 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterElevenFragment)
+
                 // Add more cases for additional materials
             }
         }

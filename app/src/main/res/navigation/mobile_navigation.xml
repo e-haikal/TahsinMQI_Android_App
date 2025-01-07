@@ -69,7 +69,9 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterTenFragment"
             app:destination="@id/navigation_material_chapter_ten" />
-
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterElevenFragment"
+            app:destination="@id/navigation_material_chapter_eleven" />
     </fragment>
 
     <!--    Materi chapter one-->
@@ -221,6 +223,16 @@
         android:label="@string/title_material_chapter_ten"
         tools:layout="@layout/fragment_materi_ayat_gharibah" >
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_eleven"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_eleven.HurufMuqathaahFragment"
+        android:label="@string/title_material_chapter_eleven"
+        tools:layout="@layout/fragment_materi_huruf_muqathaah" >
+    </fragment>
+
+
+
 
 
 
