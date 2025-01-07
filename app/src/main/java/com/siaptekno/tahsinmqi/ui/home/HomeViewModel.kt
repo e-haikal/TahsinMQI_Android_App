@@ -7,7 +7,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.text.SimpleDateFormat
 import java.util.Locale
-import java.util.Timer
 
 class HomeViewModel : ViewModel() {
     private val _currentTime = MutableLiveData<String>()

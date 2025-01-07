@@ -10,9 +10,6 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriAyatGharibahBinding
-import com.siaptekno.tahsinmqi.databinding.FragmentMateriLamTarifBinding
-import com.siaptekno.tahsinmqi.databinding.FragmentMateriTandaWaqafBinding
-import com.siaptekno.tahsinmqi.databinding.ItemMateriHukumIdghamBinding
 
 class AyatGharibahFragment : Fragment() {
 
