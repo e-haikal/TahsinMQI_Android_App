@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="white">#FFFFFF</color>-->
+    <color name="dynamic_white">#121212</color> <!-- Background or text color -->
+    <color name="black">#FFFFFF</color>
+    <color name="light_gray">#2C2C2C</color>
+</resources>

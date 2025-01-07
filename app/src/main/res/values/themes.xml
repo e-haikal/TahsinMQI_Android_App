@@ -14,6 +14,9 @@
         <item name="colorOnPrimary">@color/white</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/greenish</item>
+
+        <item name="colorSurface">@color/white</item>
+
     </style>
 
 
