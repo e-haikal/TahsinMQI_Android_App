@@ -10,6 +10,7 @@
     <string name="title_material_chapter_five">Materi Chapter 5</string>
     <string name="title_material_chapter_six">Materi Chapter 6</string>
     <string name="title_material_chapter_seven">Materi Chapter 7</string>
+    <string name="title_material_chapter_eight">Materi Chapter 8</string>
 
     <string name="title_material_name_placeholder">Material Name Placeholderr</string>
     <string name="title_material_desc_placeholder">Material Desc Placeholderr</string>
@@ -141,5 +142,10 @@
     <string name="title_material_hukum_mad">Hukum Mad</string>
         <string name="mad_thabii">Mad Thabi\'i</string>
         <string name="mad_fari">Mad Far\'i</string>
+
+
+    <string name="title_material_tafkhim_tarqiq">Tafkhim &amp; Tarqiq</string>">
+        <string name="tafkhim_sub_title">Tafkhim (Tebal)</string>
+        <string name="tarqiq_sub_title">Tarqiq (Tipis)</string>
 
 </resources>

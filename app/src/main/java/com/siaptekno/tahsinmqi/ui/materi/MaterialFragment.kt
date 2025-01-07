@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.siaptekno.tahsinmqi.R
 import com.siaptekno.tahsinmqi.data.material.Material
-import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
 import com.siaptekno.tahsinmqi.databinding.FragmentMateriBinding
 
 class MaterialFragment : Fragment() {
@@ -22,7 +21,7 @@ class MaterialFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout using the binding class
         _binding = FragmentMateriBinding.inflate(inflater, container, false)
         return binding.root
@@ -58,6 +57,7 @@ class MaterialFragment : Fragment() {
                 5 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterFiveFragment)
                 6 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterSixFragment)
                 7 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterSevenFragment)
+                8 -> findNavController().navigate(R.id.action_materialFragment_to_MaterialChapterEightFragment)
                 // Add more cases for additional materials
             }
         }

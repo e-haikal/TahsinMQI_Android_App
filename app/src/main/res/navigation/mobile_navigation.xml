@@ -60,7 +60,9 @@
         <action
             android:id="@+id/action_materialFragment_to_MaterialChapterSevenFragment"
             app:destination="@id/navigation_material_chapter_seven" />
-
+        <action
+            android:id="@+id/action_materialFragment_to_MaterialChapterEightFragment"
+            app:destination="@id/navigation_material_chapter_eight" />
 
     </fragment>
 
@@ -192,6 +194,17 @@
         android:label="@string/title_material_chapter_seven"
         tools:layout="@layout/fragment_materi_hukum_mad" >
     </fragment>
+
+    <fragment
+        android:id="@+id/navigation_material_chapter_eight"
+        android:name="com.siaptekno.tahsinmqi.ui.materi.chapter_eight.MateriTafkhimTarqiqFragment"
+        android:label="@string/title_material_chapter_eight"
+        tools:layout="@layout/fragment_materi_tafkhim_tarqiq" >
+    </fragment>
+
+
+
+
 
 
 

@@ -23,7 +23,7 @@ class HukumIdghamFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout using the binding class
         _binding = ItemMateriHukumIdghamBinding.inflate(inflater, container, false)
 
