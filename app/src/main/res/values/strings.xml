@@ -7,6 +7,7 @@
     <string name="title_sub_material_chapter_two">Materi Chapter 2</string>
     <string name="title_material_chapter_three">Materi Chapter 3</string>
     <string name="title_material_chapter_four">Materi Chapter 4</string>
+    <string name="title_material_chapter_five">Materi Chapter 5</string>
 
     <string name="title_material_name_placeholder">Material Name Placeholderr</string>
     <string name="title_material_desc_placeholder">Material Desc Placeholderr</string>
@@ -130,6 +131,8 @@
     <string name="title_material_hukum_bacaan">Hukum Bacaan</string>
         <string name="nun_mati">Nun Mati / Tanwin</string>
         <string name="mim_mati">Mim Mati</string>
+
+    <string name="title_material_hukum_idgham">Hukum Idgham</string>
 
 
 </resources>
