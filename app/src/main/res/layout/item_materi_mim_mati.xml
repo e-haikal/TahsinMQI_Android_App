@@ -38,7 +38,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
 
         <ImageView
@@ -70,7 +70,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
 
         <ImageView
@@ -102,7 +102,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
 
         <View

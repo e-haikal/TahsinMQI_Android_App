@@ -29,7 +29,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/iv_2"
@@ -50,7 +50,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/iv_3"
@@ -71,7 +71,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/iv_4"
@@ -92,7 +92,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
         <ImageView
             android:id="@+id/iv_5"
@@ -123,7 +123,7 @@
             android:adjustViewBounds="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:layout_marginEnd="@dimen/margin_medium"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"/>
         <View
             android:id="@+id/view_separator"
