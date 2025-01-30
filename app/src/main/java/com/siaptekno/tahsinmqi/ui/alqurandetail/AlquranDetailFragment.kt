@@ -55,6 +55,9 @@ class AlquranDetailFragment : Fragment() {
         // Initialize RecyclerView
         binding.rvDetailSurah.layoutManager = LinearLayoutManager(context)
 
+        // Observe data changes
+        observeViewModel()
+
         // Fetch and observe Surah data
         viewModel.fetchSurahDetail(surahNumber)
         viewModel.surahDetail.observe(viewLifecycleOwner) { surahDetail ->
@@ -66,14 +69,11 @@ class AlquranDetailFragment : Fragment() {
         // Initialize ExoPlayer
         exoPlayer = ExoPlayer.Builder(requireContext()).build()
 
-        binding.toolbar.setNavigationOnClickListener {
-            requireActivity().onBackPressed()
-        }
-
         // Set up the toolbar
-        binding.toolbar.title = "Surah Detail" // Default title
+//        binding.toolbar.title = "Surah Detail" // Default title
         (requireActivity() as? AppCompatActivity)?.setSupportActionBar(binding.toolbar)
         binding.toolbar.setNavigationOnClickListener {
+            stopAudio() // Stop the audio when navigating back
             findNavController().navigateUp()
         }
 
@@ -132,6 +132,7 @@ class AlquranDetailFragment : Fragment() {
         val navController = findNavController()
         val destinationId = navController.currentDestination?.id
         val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.nav_view)
+        stopAudio() // Ensure audio stops when the fragment is destroyed
 
         // Show BottomNavigationView only if navigating to the HomeFragment.
         if (destinationId == R.id.navigation_alquran) {
