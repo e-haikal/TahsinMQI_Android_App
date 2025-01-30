@@ -41,7 +41,6 @@ class AlquranFragment : Fragment() {
 
         alquranViewModel.listSurah.observe(viewLifecycleOwner) { listSurah ->
             val adapter = AlquranAdapter(listSurah) { dataItem ->
-//                Toast.makeText(requireContext(), "Clicked: ${dataItem.name.translation.en}", Toast.LENGTH_SHORT).show()
                 // Add navigation to Surah Detail here
                 val bundle = Bundle().apply {
                     putInt("SURAH_NUMBER", dataItem.number)

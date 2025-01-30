@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -49,7 +48,6 @@ class MainActivity : AppCompatActivity() {
 
         // Apply white tint programmatically to the navigation icon
         binding.toolbar.navigationIcon?.setTint(getColor(R.color.white))
-
 
         // Customize bottom navigation behavior
         navView.setOnItemSelectedListener { item ->
@@ -84,7 +82,6 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.navigation_alquran -> {
-//                    binding.toolbar.title = getString(R.string.title_alquran)
                     supportActionBar?.hide()
                 }
 

@@ -43,9 +43,7 @@ class HomeFragment : Fragment() {
         binding.layoutClickSchedule.setOnClickListener {
             findNavController().navigate(R.id.navigation_schedule) // Ensure the ID matches the navigation graph
         }
-//        binding.layoutClickAlquran.setOnClickListener {
-//            findNavController().navigate(R.id.navigation_alquran) // Ensure the ID matches the navigation graph
-//        }
+
         // Set up the click listener for the Chat Activity navigation
         binding.layoutClickAlquran.setOnClickListener {
             val intent = Intent(requireContext(), ChatActivity::class.java)
@@ -59,7 +57,6 @@ class HomeFragment : Fragment() {
         binding.tvSeeMore.setOnClickListener {
             findNavController().navigate(R.id.navigation_material) // Ensure the ID matches the navigation graph
         }
-
 
         // Hide the ActionBar when this fragment is created
         requireActivity().actionBar?.hide()
