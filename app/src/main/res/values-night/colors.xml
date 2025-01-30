@@ -5,4 +5,6 @@
     <color name="black">#FFFFFF</color>
     <color name="light_gray">#2C2C2C</color>
     <color name="dynamic_cool_gray">#2C2C2C</color>
+    <color name="lucky_gray">#FF777777</color> <!-- Spesifically for quran translation text -->
+
 </resources>
