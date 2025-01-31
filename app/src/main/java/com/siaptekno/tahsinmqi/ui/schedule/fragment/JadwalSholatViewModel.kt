@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.schedule
+package com.siaptekno.tahsinmqi.ui.schedule.fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

@@ -1,4 +1,4 @@
-package com.siaptekno.tahsinmqi.ui.schedule
+package com.siaptekno.tahsinmqi.ui.schedule.fragment
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.siaptekno.tahsinmqi.databinding.FragmentJadwalSholatBinding
+import com.siaptekno.tahsinmqi.databinding.ItemJadwalSholatBinding
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -18,7 +19,7 @@ import java.util.Locale
 class JadwalSholatFragment : Fragment() {
 
     // Binding for the fragment's layout. Nullable to handle lifecycle management properly.
-    private var _binding : FragmentJadwalSholatBinding? = null
+    private var _binding : ItemJadwalSholatBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel: JadwalSholatViewModel by viewModels()
@@ -37,7 +38,7 @@ class JadwalSholatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout using the binding class
-        _binding = FragmentJadwalSholatBinding.inflate(inflater, container, false)
+        _binding = ItemJadwalSholatBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -51,10 +52,10 @@ class JadwalSholatFragment : Fragment() {
 
         // Fetch the schedule when the fragment is created
         viewModel.fetchSchedule()
-
-        binding.toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
-        }
+//
+//        binding.toolbar.setNavigationOnClickListener {
+//            findNavController().navigateUp()
+//        }
 
     }
 

@@ -7,7 +7,7 @@
     <string name="title_tahsin">Tahsin</string>
     <string name="title_kelas_tahsn">Kelas Tahsin</string>
     <string name="title_bada_maghrib">Ba\'da Maghrib</string>
-    <string name="title_tahsin_desc">Tahsin adalah kegiatan rutin belajar Al-Qur\'an setiap sabtu malam atau malam minggu. Terbuka untuk anak muda dan orang tua.</string>
+    <string name="title_tahsin_desc">Kelas Tahsin MQI adalah kegiatan rutin belajar Al-Qur\'an setiap sabtu malam atau malam minggu. Terbuka untuk anak muda dan orang tua.</string>
     <string name="title_sub_material_chapter_two">Materi Chapter 2</string>
     <string name="title_material_chapter_three">Materi Chapter 3</string>
     <string name="title_material_chapter_four">Materi Chapter 4</string>
@@ -23,8 +23,15 @@
     <string name="title_material_desc_placeholder">Material Desc Placeholderr</string>
     <string name="title_show_material">Lihat Materi</string>
     <string name="title_show_all_material">Lihat Semua</string>
+
+    <!--    Title for Schedule-->
     <string name="title_schedule">Jadwal </string>
     <string name="title_schedule_sholat">Jadwal Sholat</string>
+
+    <!--    Sub-title for Schedule-->
+        <string name="jadwal_sholat_sub_title">Jadwal Sholat</string>
+        <string name="jadwal_tahsin_sub_title">Jadwal Tahsin</string>
+
     <string name="title_date">Tanggal</string>
     <string name="title_imsak">Imsak</string>
     <string name="title_shubuh">Shubuh</string>

@@ -63,7 +63,7 @@
 
     <fragment
         android:id="@+id/navigation_schedule"
-        android:name="com.siaptekno.tahsinmqi.ui.schedule.JadwalSholatFragment"
+        android:name="com.siaptekno.tahsinmqi.ui.schedule.JadwalFragment"
         android:label="@string/title_schedule"
         tools:layout="@layout/fragment_jadwal_sholat" >
     </fragment>
