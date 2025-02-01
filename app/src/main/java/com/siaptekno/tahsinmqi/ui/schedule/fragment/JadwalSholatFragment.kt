@@ -77,7 +77,7 @@ class JadwalSholatFragment : Fragment() {
 
         viewModel.schedule.observe(viewLifecycleOwner) { schedule ->
             // Update UI with fetched data
-            binding.tvPlaceholderLocation.text = schedule.data.lokasi
+//            binding.tvPlaceholderLocation.text = schedule.data.lokasi
             binding.tvPlaceholderCurrentDate.text = schedule.data.jadwal.tanggal
             binding.tvPlaceholderImsakTime.text = schedule.data.jadwal.imsak
             binding.tvPlaceholderShubuhTime.text = schedule.data.jadwal.subuh
