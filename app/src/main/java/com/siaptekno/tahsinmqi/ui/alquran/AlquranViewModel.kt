@@ -39,7 +39,8 @@ class AlquranViewModel : ViewModel() {
                     _errorMessage.postValue("Failed to load data: ${response.message()}")
                 }
             } catch (e: Exception) {
-                _errorMessage.postValue("Error: ${e.message}")
+//                _errorMessage.postValue("Error: ${e.message}")
+                _errorMessage.postValue("Error: Silakan cek koneksi internet Anda")
             } finally {
                 _isLoading.postValue(false)
             }

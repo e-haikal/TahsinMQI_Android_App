@@ -266,6 +266,22 @@
         app:layout_constraintStart_toEndOf="@id/tv_title_isya"
         app:layout_constraintTop_toTopOf="@id/tv_title_isya" />
 
+
+    <!-- List prayer isya start -->
+    <TextView
+        android:id="@+id/tv_sumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_source"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_extra_large"
+        android:textSize="@dimen/text_size_body"
+        android:textColor="@color/greenish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_isya"/>
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/progress_bar"
         android:layout_width="200dp"

@@ -44,7 +44,8 @@ class JadwalSholatViewModel : ViewModel() {
             } catch (e: HttpException) {
                 _error.postValue("Network error: ${e.message()}")
             } catch (e: Exception) {
-                _error.postValue("An error occurred: ${e.message}")
+//                _error.postValue("An error occurred: ${e.message}")
+                _error.postValue("Error: Silakan cek koneksi internet Anda")
             }
         }
     }
