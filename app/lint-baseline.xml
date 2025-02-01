@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.6.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.6.1)" variant="fatal" version="8.6.1">
+
+    <issue
+        id="NotSibling"
+        message="`@id/vp_material_chapter_two` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="        app:layout_constraintTop_toBottomOf=&quot;@id/vp_material_chapter_two&quot;>&lt;/androidx.fragment.app.FragmentContainerView>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_materi_sifat_huruf.xml"
+            line="51"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@+id/tv_item_name_chapter_two` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="            app:layout_constraintTop_toBottomOf=&quot;@+id/tv_item_name_chapter_two&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_materi.xml"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@+id/tv_item_description` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="            app:layout_constraintBottom_toTopOf=&quot;@+id/tv_item_description&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_materi_chapter_two.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="NotSibling"
+        message="`@id/view_bg_button_3` is not a sibling in the same `ConstraintLayout`"
+        errorLine1="            app:layout_constraintTop_toBottomOf=&quot;@id/view_bg_button_3&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_materi_mad_thabii.xml"
+            line="26"
+            column="13"/>
+    </issue>
+
+</issues>
