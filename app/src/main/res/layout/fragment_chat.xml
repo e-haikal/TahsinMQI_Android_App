@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.tanyaaitahsin.ChatFragment">
 
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,6 +17,7 @@
         app:titleTextColor="@color/white"
         tools:ignore="MissingConstraints" />
 
+    <!-- Guideline for layout spacing -->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="match_parent"
@@ -23,6 +25,7 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="67dp" />
 
+    <!-- RecyclerView for the chat messages -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rc_chat"
         android:layout_width="0dp"
@@ -30,48 +33,64 @@
         android:clipChildren="true"
         android:clipToPadding="true"
         tools:listitem="@layout/item_chat"
-        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintBottom_toTopOf="@+id/inputContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <!-- Input container for TextInputLayout and Send button -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputContainer"
         android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
+        <!-- TextInputLayout for the text input field -->
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:id="@+id/image_prompt_text_til"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:layout_toStartOf="@+id/iv_send"
-            android:hint="@string/title_tanya_ai">
+            android:hint="@string/title_tanya_ai"
+            app:boxBackgroundMode="outline"
+            app:endIconMode="clear_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <!-- TextInputEditText for multi-line input -->
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ev_send"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:imeOptions="actionDone"
+                android:scrollHorizontally="false"
+                android:overScrollMode="never" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Send Button (ImageView) -->
         <ImageView
             android:id="@+id/iv_send"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
             android:layout_margin="8dp"
-            android:src="@drawable/img_send" />
-    </RelativeLayout>
+            android:src="@drawable/img_send"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Progress Bar -->
     <ProgressBar
         android:id="@+id/image_prompt_progress"
         android:layout_width="wrap_content"
@@ -80,6 +99,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
